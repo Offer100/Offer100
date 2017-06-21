@@ -4,7 +4,7 @@
 <title>Home</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="gb2312">
+<meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Deliccio Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
@@ -51,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<span class="icon-bar"></span>
 					  </button>
 						<div class="logo">
-							<a class="navbar-brand" href="login.html">Offer100<span>让优秀的人才遇见更好的机会
+							<a class="navbar-brand" href="login.html">Offer100<span>璁╀紭绉�鐨勪汉鎵嶉亣瑙佹洿濂界殑鏈轰細
 							</span></a>
 						</div>
 					</div>
@@ -66,8 +66,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="sap_tabs">	
 						<div id="horizontalTab" style="display: block; width: 100%; margin: 0;">
 							<ul class="resp-tabs-list">
-							  <li class="resp-tab-item grid1" aria-controls="tab_item-0" role="tab"><span>登录</span></li>
-							  <li class="resp-tab-item grid2" aria-controls="tab_item-1" role="tab"><span>注册</span></li>
+							  <li class="resp-tab-item grid1" aria-controls="tab_item-0" role="tab"><span>鐧诲綍</span></li>
+							  <li class="resp-tab-item grid2" aria-controls="tab_item-1" role="tab"><span>娉ㄥ唽</span></li>
 							  <div class="clear"></div>
 							</ul>				  	 
 							<div class="resp-tabs-container">
@@ -76,20 +76,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="sign-in-form">
 											<div class="in-form">
 												<form id="HR_SIGN_IN" method="post" action="control/HRLoginServlet">
-													<input type="text" name="login_mailbox"placeholder="企业邮箱" required >
-													<input type="password" name="login_password"placeholder="密码" required >
+													<input type="text" name="login_mailbox"placeholder="浼佷笟閭" required >
+													<input type="password" name="login_password"placeholder="瀵嗙爜" required >
 												</form>
 												<div class="ckeck-bg">
 													<div class="checkbox-form">
 														<div class="check-left">
 															<div class="check">
-																<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>记住密码</label>
+																<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>璁颁綇瀵嗙爜</label>
 															</div>
 														</div>
 														<div class="check-right">
 															<form>
-																<!--<input type="submit" name="login_btn" value="登录">-->
-
+																<!--<input type="submit" name="login_btn" value="鐧诲綍">-->
+																<input type="button" name="login_btn" value="鐧诲綍" onclick="HRLogin(1)">
 															</form>
 														</div>
 														<div class="clearfix"> </div>
@@ -105,12 +105,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<div class="in-form Personal">
 												
 												<form >
-													<input type="text" class="textbox" name="register_mailbox" value="输入您的企业邮箱..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入您的企业邮箱...';}">
-													<input type="text" class="password" name="register_password" value="输入您的密码..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '输入您的密码';}">
-													<input type="text" class="password" name="check_password" value="确认密码..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '确认密码';}">
+													<input type="text" class="textbox" name="register_mailbox" value="杈撳叆鎮ㄧ殑浼佷笟閭..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '璇疯緭鍏ユ偍鐨勪紒涓氶偖绠�...';}">
+													<input type="text" class="password" name="register_password" value="杈撳叆鎮ㄧ殑瀵嗙爜..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '杈撳叆鎮ㄧ殑瀵嗙爜';}">
+													<input type="text" class="password" name="check_password" value="纭瀵嗙爜..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '纭瀵嗙爜';}">
 												</form>
 												<form>
-													<input type="submit" name="register_btn" value="注册">
+													<!--<input type="submit" name="register_btn" value="娉ㄥ唽">-->
+                                                    <input type="button" name="register_btn" value="娉ㄥ唽" onclick="HRLogin(2)">
 												</form>
 											</div>
 										</div>

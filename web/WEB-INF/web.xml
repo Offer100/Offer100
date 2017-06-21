@@ -18,4 +18,15 @@
         <url-pattern>/control/HRLoginServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <display-name>HRSignUpServlet</display-name>
+        <servlet-name>HRSignUpServlet</servlet-name>
+        <servlet-class>control.HRSignUpServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HRSignUpServlet</servlet-name>
+        <url-pattern>/control/HRSignUpServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>

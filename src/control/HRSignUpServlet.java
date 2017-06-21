@@ -8,9 +8,9 @@ import java.io.IOException;
 
 /**
  * Created by Charlotte514 on 2017/6/21.
- * used in HR account sign up for system
+ * uesd in HR account sign in system
  */
-public class HRLoginServlet extends HttpServlet {
+public class HRSignUpServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.doPost(req, resp);
