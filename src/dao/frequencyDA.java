@@ -1,4 +1,4 @@
-package db;
+package dao;
 import redis.clients.jedis.*;
 public class frequencyDA {
 	static int[] results_times=new int[12];
@@ -8,7 +8,7 @@ public class frequencyDA {
 	}
      public void getConnection(){
     	 jedis=new Jedis("localhost");
-    	 System.out.println("连接成功！");
+    	 System.out.println("锟斤拷锟接成癸拷锟斤拷");
     	 System.out.println("Server is running: "+jedis.ping());
      }
      public static void update(String key,String date){
