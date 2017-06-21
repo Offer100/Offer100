@@ -11,16 +11,16 @@ public class hrDA {
  	static Connection connection=null; //������
  	static Statement statement=null;   //sql���ԵĲ�����
  	static PreparedStatement pps=null; //��ֹsqlע��
- 	
+
  	static String driver="com.mysql.jdbc.Driver";
-	static String jdbcUrl="jdbc:mysql://localhost:3306/offer100";	  
+	static String jdbcUrl="jdbc:mysql://localhost:3306/offer100";
 	static String user="root";
 	static String password="wasd";
     /**************************************�������ݿ�**********************************************/
-   	public static Connection getConnection() {  	  
+   	public static Connection getConnection() {
     	try{
-    		//������������    		
-			Class.forName(driver);			
+    		//������������
+			Class.forName(driver);
     		//�������ݿ�
     		connection=DriverManager.getConnection(jdbcUrl,user,password);
     		statement=connection.createStatement();
@@ -31,10 +31,10 @@ public class hrDA {
     	catch(SQLException e){
     		e.printStackTrace();
     	}
-    	return connection;		
+    	return connection;
    	}
    	/****************************************�ر����ݿ�*********************************************/
-    public static void terminate(){   	
+    public static void terminate(){
     	try {
     		statement.close();
 			connection.close();
@@ -44,7 +44,8 @@ public class hrDA {
 		}
     }
     /**************************************����������û�******************************************/
-    public static HR find(String mail) throws dao.NotFoundException {
+
+    public static HR find(String mail) throws NotFoundException{
     	hr=new HR();
     	String sql="select * from login_table where mail='"+mail+"'";
     	System.out.println(sql);
@@ -55,7 +56,9 @@ public class hrDA {
     			hr.setMail(rs.getString(1));
     			hr.setPassword(rs.getString(2));
     		}else{
-    			throw new dao.NotFoundException("�û������ڣ�");
+
+    			throw new NotFoundException("�û������ڣ�");
+
     		}
     		rs.close();
     	}catch (SQLException e){
@@ -84,14 +87,14 @@ public class hrDA {
 			//��������ֵ����set
 			pps.setString(1, aHR.getMail());
 	    	pps.setString(2, aHR.getPassword());
-	    	rs=pps.executeQuery();	    	
+	    	rs=pps.executeQuery();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
     	return rs.next();
     }
     /***************************************�ӿڷ�����д*******************************************/
-	
+
 	public static void main(String[] args)throws Exception{
 //		hrDA user=new hrDA();
 //		hrDA.getConnection();
