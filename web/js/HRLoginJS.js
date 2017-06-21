@@ -3,4 +3,5 @@
  */
 function HRLogin(type){
 
+    var formSignIn=document.getElementById("")
 }
