@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="796b5b4d-0d9a-40f6-b9a4-d9ea3768a4f8" name="Default" comment="修改了UTF-8下的中文乱码，增加了HR注册的servlet绑定和描述">
+    <list default="true" id="796b5b4d-0d9a-40f6-b9a4-d9ea3768a4f8" name="Default" comment="完成HR注册登录界面的JS">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/control/HRLoginServlet.java" afterPath="$PROJECT_DIR$/src/control/HRLoginServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/control/HRSignUpServlet.java" afterPath="$PROJECT_DIR$/src/control/HRSignUpServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dao/frequencyDA.java" afterPath="$PROJECT_DIR$/src/dao/frequencyDA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/HR.java" afterPath="$PROJECT_DIR$/src/model/HR.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Link_offer_hr.java" afterPath="$PROJECT_DIR$/src/model/Link_offer_hr.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Offer.java" afterPath="$PROJECT_DIR$/src/model/Offer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/HRLoginJS.js" afterPath="$PROJECT_DIR$/web/js/HRLoginJS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/login.jsp" afterPath="$PROJECT_DIR$/web/login.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,9 +33,9 @@
               <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <marker date="1498058680471" expanded="true" signature="1591:1638" ph="select * fro... login_table" />
-                <marker date="1498058680471" expanded="true" signature="2182:2280" ph="insert into login_table... " />
-                <marker date="1498058680471" expanded="true" signature="2633:2686" ph="select * fro... login_table" />
+                <marker date="1498094364225" expanded="true" signature="1591:1638" ph="select * fro... login_table" />
+                <marker date="1498094364225" expanded="true" signature="2182:2280" ph="insert into login_table... " />
+                <marker date="1498094364225" expanded="true" signature="2633:2686" ph="select * fro... login_table" />
               </folding>
             </state>
           </provider>
@@ -68,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HRSignUpServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HRSignUpServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/control/HRSignUpServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
@@ -80,32 +73,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OfferDA.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/OfferDA.java">
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <marker date="1498054378209" expanded="false" signature="447:455" ph="&lt;~&gt;" />
-                <marker date="1498054378209" expanded="false" signature="534:542" ph="&lt;~&gt;" />
-                <marker date="1498054378209" expanded="false" signature="617:625" ph="&lt;~&gt;" />
-                <marker date="1498054378209" expanded="true" signature="2202:3147" ph="insert into jobOffer_table... " />
-                <marker date="1498054378209" expanded="true" signature="3704:3815" ph="select * fro... jobOffer_table" />
-                <marker date="1498054378209" expanded="true" signature="3746:3796" ph="select id fr... link_hr_offer" />
+                <marker date="1498094610308" expanded="true" signature="96386:96403" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="96386:96421" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="96386:96434" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="96386:96449" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="96484:99028" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="96497:99013" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="96551:96951" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="96570:96936" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="96699:96916" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="96739:96882" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="96760:96860" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="97001:97307" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="97020:97292" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="97094:97272" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="97134:97238" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="97155:97216" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="97358:97623" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="97377:97608" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="97410:97588" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="97450:97554" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="97471:97532" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="97666:97972" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="97685:97957" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="97759:97937" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="97799:97903" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="97820:97881" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="98023:98341" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="98042:98326" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="98128:98306" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="98168:98272" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="98189:98250" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="98376:98682" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="98395:98667" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="98469:98647" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="98509:98613" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="98530:98591" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="98734:98999" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="98753:98984" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="98786:98964" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="98826:98930" ph="..." />
+                <marker date="1498094610308" expanded="true" signature="98847:98908" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HRLoginJS.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HRLoginJS.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/HRLoginJS.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-              <folding>
-                <element signature="n#!!doc;n#HRLogin#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="132">
+              <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -246,9 +271,10 @@
         <option value="$PROJECT_DIR$/src/model/Offer.java" />
         <option value="$PROJECT_DIR$/src/model/HR.java" />
         <option value="$PROJECT_DIR$/src/control/HRLoginServlet.java" />
-        <option value="$PROJECT_DIR$/web/js/HRLoginJS.js" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
         <option value="$PROJECT_DIR$/src/control/HRSignUpServlet.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/web/js/HRLoginJS.js" />
       </list>
     </option>
   </component>
@@ -416,6 +442,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="control" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ruanko.Offer100" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ruanko.Offer100" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -889,7 +929,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9010000" />
+    <option name="totallyTimeSpent" value="9178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1924" height="1084" extended-state="0" />
@@ -907,7 +947,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -920,11 +960,36 @@
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2572973" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -935,7 +1000,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改了UTF-8下的中文乱码，增加了HR注册的servlet绑定和描述" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了UTF-8下的中文乱码，增加了HR注册的servlet绑定和描述" />
+    <MESSAGE value="完成HR注册登录界面的JS" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成HR注册登录界面的JS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -946,26 +1012,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/dao/hrDA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-566">
-          <caret line="55" column="48" lean-forward="true" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1498058680471" expanded="true" signature="1591:1638" ph="select * fro... login_table" />
-            <marker date="1498058680471" expanded="true" signature="2182:2280" ph="insert into login_table... " />
-            <marker date="1498058680471" expanded="true" signature="2633:2686" ph="select * fro... login_table" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/HRLoginJS.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-          <folding>
-            <element signature="n#!!doc;n#HRLogin#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -973,7 +1024,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -981,7 +1031,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1958">
           <caret line="107" column="215" lean-forward="false" selection-start-line="107" selection-start-column="203" selection-end-line="107" selection-end-column="215" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -997,7 +1046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,7 +1053,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1013,7 +1060,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1023,9 +1069,9 @@
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="false" />
-            <marker date="1498058680471" expanded="true" signature="1591:1638" ph="select * fro... login_table" />
-            <marker date="1498058680471" expanded="true" signature="2182:2280" ph="insert into login_table... " />
-            <marker date="1498058680471" expanded="true" signature="2633:2686" ph="select * fro... login_table" />
+            <marker date="1498094364225" expanded="true" signature="1591:1638" ph="select * fro... login_table" />
+            <marker date="1498094364225" expanded="true" signature="2182:2280" ph="insert into login_table... " />
+            <marker date="1498094364225" expanded="true" signature="2633:2686" ph="select * fro... login_table" />
           </folding>
         </state>
       </provider>
@@ -1068,7 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1102,7 +1147,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,7 +1154,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1496">
           <caret line="107" column="215" lean-forward="false" selection-start-line="107" selection-start-column="203" selection-end-line="107" selection-end-column="215" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1118,7 +1161,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="23" column="58" lean-forward="true" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1126,9 +1168,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!doc;n#HRLogin#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1162,7 +1202,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1170,7 +1209,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1178,7 +1216,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,9 +1225,9 @@
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="false" />
-            <marker date="1498058680471" expanded="true" signature="1591:1638" ph="select * fro... login_table" />
-            <marker date="1498058680471" expanded="true" signature="2182:2280" ph="insert into login_table... " />
-            <marker date="1498058680471" expanded="true" signature="2633:2686" ph="select * fro... login_table" />
+            <marker date="1498094364225" expanded="true" signature="1591:1638" ph="select * fro... login_table" />
+            <marker date="1498094364225" expanded="true" signature="2182:2280" ph="insert into login_table... " />
+            <marker date="1498094364225" expanded="true" signature="2633:2686" ph="select * fro... login_table" />
           </folding>
         </state>
       </provider>
@@ -1233,7 +1270,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1248,7 +1284,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="23" column="58" lean-forward="false" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1265,8 +1300,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
           <folding>
-            <marker date="1498054583952" expanded="true" signature="911:973" ph="insert into link_hr_offer... " />
-            <marker date="1498054583952" expanded="true" signature="1257:1306" ph="select * fro... link_hr_offer" />
+            <marker date="1498094364214" expanded="true" signature="911:973" ph="insert into link_hr_offer... " />
+            <marker date="1498094364214" expanded="true" signature="1257:1306" ph="select * fro... link_hr_offer" />
           </folding>
         </state>
       </provider>
@@ -1293,9 +1328,9 @@
           <caret line="55" column="48" lean-forward="true" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="false" />
-            <marker date="1498058680471" expanded="true" signature="1591:1638" ph="select * fro... login_table" />
-            <marker date="1498058680471" expanded="true" signature="2182:2280" ph="insert into login_table... " />
-            <marker date="1498058680471" expanded="true" signature="2633:2686" ph="select * fro... login_table" />
+            <marker date="1498094364225" expanded="true" signature="1591:1638" ph="select * fro... login_table" />
+            <marker date="1498094364225" expanded="true" signature="2182:2280" ph="insert into login_table... " />
+            <marker date="1498094364225" expanded="true" signature="2633:2686" ph="select * fro... login_table" />
           </folding>
         </state>
       </provider>
@@ -1304,10 +1339,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#177#178#0" expanded="false" />
-            <element signature="e#208#209#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1315,7 +1346,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1323,7 +1353,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2354">
           <caret line="107" column="215" lean-forward="false" selection-start-line="107" selection-start-column="203" selection-end-line="107" selection-end-column="215" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1332,8 +1361,8 @@
         <state relative-caret-position="22">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
-            <marker date="1498054583952" expanded="true" signature="911:973" ph="insert into link_hr_offer... " />
-            <marker date="1498054583952" expanded="true" signature="1257:1306" ph="select * fro... link_hr_offer" />
+            <marker date="1498094364214" expanded="true" signature="911:973" ph="insert into link_hr_offer... " />
+            <marker date="1498094364214" expanded="true" signature="1257:1306" ph="select * fro... link_hr_offer" />
           </folding>
         </state>
       </provider>
@@ -1342,10 +1371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#177#178#0" expanded="false" />
-            <element signature="e#208#209#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1379,9 +1404,9 @@
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="false" />
-            <marker date="1498058680471" expanded="true" signature="1591:1638" ph="select * fro... login_table" />
-            <marker date="1498058680471" expanded="true" signature="2182:2280" ph="insert into login_table... " />
-            <marker date="1498058680471" expanded="true" signature="2633:2686" ph="select * fro... login_table" />
+            <marker date="1498094364225" expanded="true" signature="1591:1638" ph="select * fro... login_table" />
+            <marker date="1498094364225" expanded="true" signature="2182:2280" ph="insert into login_table... " />
+            <marker date="1498094364225" expanded="true" signature="2633:2686" ph="select * fro... login_table" />
           </folding>
         </state>
       </provider>
@@ -1491,16 +1516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/HRLoginJS.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc;n#HRLogin#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -1516,6 +1531,64 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1498094610308" expanded="true" signature="96386:96403" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="96386:96421" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="96386:96434" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="96386:96449" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="96484:99028" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="96497:99013" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="96551:96951" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="96570:96936" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="96699:96916" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="96739:96882" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="96760:96860" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="97001:97307" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="97020:97292" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="97094:97272" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="97134:97238" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="97155:97216" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="97358:97623" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="97377:97608" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="97410:97588" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="97450:97554" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="97471:97532" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="97666:97972" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="97685:97957" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="97759:97937" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="97799:97903" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="97820:97881" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="98023:98341" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="98042:98326" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="98128:98306" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="98168:98272" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="98189:98250" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="98376:98682" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="98395:98667" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="98469:98647" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="98509:98613" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="98530:98591" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="98734:98999" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="98753:98984" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="98786:98964" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="98826:98930" ph="..." />
+            <marker date="1498094610308" expanded="true" signature="98847:98908" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/HRLoginJS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
