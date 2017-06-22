@@ -1,6 +1,6 @@
 package model;
-import db.NotFoundException;
-import db.hrDA;
+import dao.NotFoundException;
+import dao.hrDA;
 
 import java.io.Serializable;
 import java.sql.SQLException;

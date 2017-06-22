@@ -5,15 +5,17 @@
 	<%
 		//String wrongMsg=(String)session.getAttribute("wrongMsg");
 		//用request转发
-		String wrongMsg=(String)request.getAttribute("wrongMsg");
-		if("".equals(wrongMsg)&&wrongMsg==null){
+		String wrongMsg=(String)session.getAttribute("wrongMsg");
+		if(wrongMsg==null||wrongMsg.equals("")){
 		    //不需要弹窗
-		}else
+		}else{
 	%>
 	<script type="text/javascript">
 		alert("<%=wrongMsg%>");
 	</script>
-	<%request.setAttribute("wrongMsg",""); %>
+	<%}
+	session.setAttribute("wrongMsg","");
+		%>
 <title>Home</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,8 +91,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="sign-in-form">
 											<div class="in-form">
 												<form id="HR_SIGN_IN" method="post" action="control/HRLoginServlet">
-													<input type="text" name="login_mailbox"placeholder="企业邮箱" required >
-													<input type="password" name="login_password"placeholder="密码" required >
+													<input type="text" name="login_mailbox" id="login_mailbox" placeholder="企业邮箱" required >
+													<input type="password" name="login_password" id="login_password" placeholder="密码" required >
 												</form>
 												<div class="ckeck-bg">
 													<div class="checkbox-form">
@@ -118,9 +120,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<div class="in-form Personal">
 												
 												<form id="HR_SIGN_UP" method="post" action="control/HRSignUpServlet">
-													<input type="text" class="textbox" name="register_mailbox" value="输入您的企业邮箱..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入您的企业邮箱...';}">
-													<input type="text" class="password" name="register_password" value="输入您的密码..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '输入您的密码';}">
-													<input type="text" class="password" name="check_password" value="确认密码..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '确认密码';}">
+													<input type="text" class="textbox" name="register_mailbox" id="register_mailbox" value="输入您的企业邮箱..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入您的企业邮箱...';}">
+													<input type="text" class="password" name="register_password" id="register_password" value="输入您的密码..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '输入您的密码';}">
+													<input type="text" class="password" name="check_password" id="check_password" value="确认密码..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '确认密码';}">
 												</form>
 												<form>
 													<!--<input type="submit" name="register_btn" value="注册">-->

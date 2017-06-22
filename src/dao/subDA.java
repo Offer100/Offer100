@@ -1,25 +1,25 @@
-package db;
+package dao;
 import java.sql.*;
 import java.util.*;
 import model.Sub;
 
 public class subDA {
-	static Sub sub;                      //sub¶ÔÏó
-// 	static List<Offer> list;           //ÕÐÆ¸ÐÅÏ¢µÄlist¼¯ºÏ
- 	static Connection connection=null; //Á´½ÓÆ÷
- 	static Statement statement=null;   //sqlÓïÑÔµÄ²Ù×÷Æ÷
-// 	static PreparedStatement pps=null; //·ÀÖ¹sql×¢Èë
+	static Sub sub;                      //subï¿½ï¿½ï¿½ï¿½
+// 	static List<Offer> list;           //ï¿½ï¿½Æ¸ï¿½ï¿½Ï¢ï¿½ï¿½listï¿½ï¿½ï¿½ï¿½
+ 	static Connection connection=null; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ 	static Statement statement=null;   //sqlï¿½ï¿½ï¿½ÔµÄ²ï¿½ï¿½ï¿½ï¿½ï¿½
+// 	static PreparedStatement pps=null; //ï¿½ï¿½Ö¹sql×¢ï¿½ï¿½
  	
  	static String driver="com.mysql.jdbc.Driver";
 	static String jdbcUrl="jdbc:mysql://localhost:3306/offer100";	  
 	static String user="root";
 	static String password="wasd";
-    /**************************************Á´½ÓÊý¾Ý¿â**********************************************/
+    /**************************************ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½**********************************************/
    	public static Connection getConnection() {  	  
     	try{
-    		//¼ÓÔØÇý¶¯³ÌÐò    		
+    		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½    		
 			Class.forName(driver);			
-    		//Á¬½ÓÊý¾Ý¿â
+    		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½
     		connection=DriverManager.getConnection(jdbcUrl,user,password);
     		statement=connection.createStatement();
     		System.out.println("Succeed connecting database!");
@@ -31,7 +31,7 @@ public class subDA {
     	}
     	return connection;		
    	}
-   	/****************************************¹Ø±ÕÊý¾Ý¿â*********************************************/
+   	/****************************************ï¿½Ø±ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½*********************************************/
     public static void terminate(){   	
     	try {
     		statement.close();
@@ -41,7 +41,7 @@ public class subDA {
 			e.printStackTrace();
 		}
     }
-    /**************************************ÓÃÓÊÏä²éÕÒÓÃ»§******************************************/
+    /**************************************ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½******************************************/
 //    public static HR find(String mail) throws NotFoundException{
 //    	hr=new HR();
 //    	String sql="select * from login_table where mail='"+mail+"'";
@@ -53,7 +53,7 @@ public class subDA {
 //    			hr.setMail(rs.getString(1));
 //    			hr.setPassword(rs.getString(2));
 //    		}else{
-//    			throw new NotFoundException("ÓÃ»§²»´æÔÚ£¡");
+//    			throw new NotFoundException("ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½");
 //    		}
 //    		rs.close();
 //    	}catch (SQLException e){
@@ -61,7 +61,7 @@ public class subDA {
 //    	}
 //    	return hr;
 //    }
-    /****************************************Ìí¼Ó¹Ø×¢**********************************************/
+    /****************************************ï¿½ï¿½Ó¹ï¿½×¢**********************************************/
     public static void add(Sub aSub){
     	String sql="insert into subscribe_table(mail,direction) values('"
     			+aSub.getMail()+"','"+aSub.getDirection()+"')";
@@ -73,13 +73,13 @@ public class subDA {
 			e.printStackTrace();
 		}
     }
-    /****************************¼ì²âÃÜÂëºÍÕÊºÅÊÇ·ñÆ¥Åä£¬²¢·ÀÖ¹sql×¢Èë******************************/
+    /****************************ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êºï¿½ï¿½Ç·ï¿½Æ¥ï¿½ä£¬ï¿½ï¿½ï¿½ï¿½Ö¹sql×¢ï¿½ï¿½******************************/
    /* public static boolean checkUser(HR aHR) throws SQLException{
     	String sql="select * from login_table where mail=? and password=?";
     	ResultSet rs=null;
     	try {
 			pps=connection.prepareStatement(sql);
-			//¸ø²ÎÊý¸³Öµ£¬ÓÃset
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½set
 			pps.setString(1, aHR.getMail());
 	    	pps.setString(2, aHR.getPassword());
 	    	rs=pps.executeQuery();	    	
@@ -88,7 +88,7 @@ public class subDA {
 		}
     	return rs.next();
     }*/
-    /***************************************½Ó¿Ú·½·¨ÖØÐ´*******************************************/
+    /***************************************ï¿½Ó¿Ú·ï¿½ï¿½ï¿½ï¿½ï¿½Ð´*******************************************/
 	
 	public static void main(String[] args)throws Exception{
 //		hrDA user=new hrDA();

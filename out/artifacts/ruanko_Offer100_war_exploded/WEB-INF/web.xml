@@ -4,6 +4,29 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
     <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
+
+    <servlet>
+        <display-name>HRLoginServlet</display-name>
+        <servlet-name>HRLoginServlet</servlet-name>
+        <servlet-class>control.HRLoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HRLoginServlet</servlet-name>
+        <url-pattern>/control/HRLoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>HRSignUpServlet</display-name>
+        <servlet-name>HRSignUpServlet</servlet-name>
+        <servlet-class>control.HRSignUpServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HRSignUpServlet</servlet-name>
+        <url-pattern>/control/HRSignUpServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>

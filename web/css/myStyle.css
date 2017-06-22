@@ -1,0 +1,72 @@
+.main {
+	width: 100%;
+	text-align: center;
+}
+.info-form {
+	margin-top: 100px;
+	display: block;
+	width: 90%;
+	margin:  auto 0 ;
+}
+
+.info-form h4 {
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+.info-form label {
+	margin-right: 20px;
+	margin-bottom: 20px;
+	display: block;
+}
+.det{
+ background: none;
+	border: 1px solid #A3A1A1;
+	width: 80%;
+	display: inline-block;
+	height: 150px;
+	outline: none;
+	font-size: 14px;
+	color: #747577;
+	resize: none;
+	padding: 10px 15px;
+}
+.info-form input[type="text"] {
+	display: inline-block;
+	background: none;
+	border: 1px solid #A3A1A1;
+	width: 32.3%;
+	outline: none;
+	font-size: 14px;
+	color: #747577;
+	padding: 10px 15px;
+	margin-right: 10px;
+	height: 30px;
+}
+.info-form select {
+	display: inline-block;
+	background: none;
+	border: 1px solid #A3A1A1;
+	width: 32.3%;
+	outline: none;
+	font-size: 5px;
+	color: #747577;
+	height: 30px;
+
+}
+.info-form input[type="submit"] {
+	background: #ef717a;
+	border: 1px solid #ef717a;
+	padding: .6em 0;
+	width: 14%;
+	margin-top: 2em;
+	font-size: 14px;
+	color: #fff;
+	font-weight: 400;
+	letter-spacing: 1px;
+	outline: none;
+	transition: 0.5s all ease;
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	-ms-transition: 0.5s all ease;
+}
