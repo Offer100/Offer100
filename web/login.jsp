@@ -2,6 +2,18 @@
 <html>
 <head>
 	<%@ page contentType="text/html; charset=UTF-8" %>
+	<%
+		//String wrongMsg=(String)session.getAttribute("wrongMsg");
+		//用request转发
+		String wrongMsg=(String)request.getAttribute("wrongMsg");
+		if("".equals(wrongMsg)&&wrongMsg==null){
+		    //不需要弹窗
+		}else
+	%>
+	<script type="text/javascript">
+		alert("<%=wrongMsg%>");
+	</script>
+	<%request.setAttribute("wrongMsg",""); %>
 <title>Home</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -152,3 +164,5 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //for bootstrap working -->
 </body>
 </html>
+
+<<

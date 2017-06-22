@@ -42,20 +42,20 @@ public class HR implements Serializable{
       }
      /****************************其他方法****************************/
      //添加新用户
-     private void add(){
+     public void add(){
     	 hrDA.getConnection();
     	 hrDA.add(this);
     	 hrDA.terminate();
      }
      //根据邮箱查找用户信息
-     private HR find(String mail) throws NotFoundException{
+     public HR find(String mail) throws NotFoundException{
     	 hrDA.getConnection();
     	 HR aHR=hrDA.find(mail);
     	 hrDA.terminate();
     	 return aHR;
      }
      //检查用户登录帐号密码是否一致，并防止sql注入
-     private boolean check(HR aHR) throws SQLException{
+     public boolean check(HR aHR) throws SQLException{
     	 hrDA.getConnection();
     	 boolean gotIt=hrDA.checkUser(aHR);
     	 hrDA.terminate();
