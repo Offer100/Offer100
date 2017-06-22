@@ -1,11 +1,11 @@
 package model;
 
+import dao.OfferDA;
+
 import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
-
-import db.OfferDA;
 
 
 public class Offer implements Serializable {
@@ -23,11 +23,11 @@ public class Offer implements Serializable {
        private String Time;
        private String AllString;
        
-       private String IndustryCatalog;//Ö°ÒµÖÖÀà£ºIT£¬½ÌÓı£¬½ğÈÚ
-       private String JobType;//¹¤×÷ÀàĞÍ£ºÈ«Ö°£¬ÊµÏ°£¬Ó¦½ì
-       private String Adress;//µØÖ·;
+       private String IndustryCatalog;//Ö°èŒä¸šç§ç±»ï¼šITï¼Œæ•™è‚²ï¼Œé‡‘è
+       private String JobType;//å·¥ä½œç±»å‹ï¼šå…¨èŒï¼Œå®ä¹ ï¼Œåº”å±Š
+       private String Adress;//åœ°å€;
        
-       /***************************¹¹Ôì·½·¨*****************************************/
+       /***************************ï¿½ï¿½ï¿½ì·½ï¿½ï¿½*****************************************/
        public Offer(){
     	   super();
        }
@@ -48,7 +48,7 @@ public class Offer implements Serializable {
 		JobType = jobType;
 		Adress = adress;
 	    }
-        /************************getºÍset·½·¨******************************************/
+        /************************getå’Œsetæ–¹æ³•******************************************/
 		public int getId() {
 			return id;
 		}
@@ -144,13 +144,13 @@ public class Offer implements Serializable {
 		public void setAdress(String adress) {
 			Adress = adress;
 		}
-		/***********************************ÆäËû·½·¨
+		/***********************************å…¶ä»–æ–¹æ³•
 		 * @throws InvocationTargetException 
 		 * @throws IllegalArgumentException 
 		 * @throws IllegalAccessException 
 		 * @throws SecurityException 
 		 * @throws NoSuchMethodException ***************************************/
-		//Ôö¼ÓÒ»ÌõÕĞÆ¸ĞÅÏ¢£¬²ÎÊıÊÇ¶ÔÏó
+		//å¢åŠ ä¸€æ¡æ‹›è˜ä¿¡æ¯ï¼Œå‚æ•°æ˜¯å¯¹è±¡
 		public void add(Offer offer,String mail) throws NoSuchMethodException, 
 		                                                 SecurityException, 
 		                                                 IllegalAccessException, 
@@ -160,7 +160,7 @@ public class Offer implements Serializable {
 			OfferDA.add(offer,mail);
 			OfferDA.terminate();
 		}
-		//²éÑ¯ËùÓĞÕĞÆ¸ĞÅÏ¢·µ»Ø¶ÔÏólist£¬²ÎÊıÊÇmail£»
+		//æŸ¥è¯¢æ‰€æœ‰æ‹›è˜ä¿¡æ¯è¿”å›å¯¹è±¡listï¼Œå‚æ•°æ˜¯mailï¼›
 		public  List<Offer> find(String mail){
 			List<Offer> offerList=new ArrayList<Offer>();
 			OfferDA.getConnection();
@@ -168,7 +168,7 @@ public class Offer implements Serializable {
 			OfferDA.terminate();
 			return offerList;
 		}
-		//É¾³ıÒ»ÌõÕĞÆ¸ĞÅÏ¢
+		//åˆ é™¤ä¸€æ¡æ‹›è˜ä¿¡æ¯
 		public void delete(int id,String mail){
 			OfferDA.getConnection();
 			OfferDA.delete(id, mail);

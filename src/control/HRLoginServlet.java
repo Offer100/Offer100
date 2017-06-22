@@ -13,6 +13,7 @@ import java.io.IOException;
 public class HRLoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        req.setCharacterEncoding("UTF-8");
+        resp.sendRedirect("../login.jsp");
     }
 }

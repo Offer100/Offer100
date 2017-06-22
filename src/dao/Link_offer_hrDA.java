@@ -1,10 +1,9 @@
-package db;
+package dao;
 
 
 import java.sql.*;
-import java.util.*;
-
-import model.Link_offer_hr;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Link_offer_hrDA {
 	static String driver="com.mysql.jdbc.Driver";
@@ -24,7 +23,7 @@ public class Link_offer_hrDA {
 			Class.forName(driver);
 			connection=DriverManager.getConnection(jdbcUrl,user,password);
 			statement=connection.createStatement();
-			System.out.println("Êý¾Ý¿âÁ¬½ÓÚÀ³É¹¦");
+			System.out.println("ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½");
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
 		}catch(SQLException e){

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<%@ page contentType="text/html; charset=UTF-8" %>
 <title>Home</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Deliccio Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Deliccio Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -57,8 +58,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
-					</div><!-- /.navbar-collapse -->
 				</nav>
+					</div><!-- /.navbar-collapse -->
 			</div>
 			<div class="banner-info">
 		
@@ -104,7 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="sign-in-form">
 											<div class="in-form Personal">
 												
-												<form >
+												<form id="HR_SIGN_UP" method="post" action="control/HRSignUpServlet">
 													<input type="text" class="textbox" name="register_mailbox" value="输入您的企业邮箱..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入您的企业邮箱...';}">
 													<input type="text" class="password" name="register_password" value="输入您的密码..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '输入您的密码';}">
 													<input type="text" class="password" name="check_password" value="确认密码..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '确认密码';}">
