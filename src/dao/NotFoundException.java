@@ -1,4 +1,4 @@
-package dao;
+package db;
 
 public class NotFoundException extends Exception {
       /**

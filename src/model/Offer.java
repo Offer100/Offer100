@@ -1,11 +1,11 @@
 package model;
 
-import dao.OfferDA;
-
 import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+
+import db.OfferDA;
 
 
 public class Offer implements Serializable {
@@ -23,11 +23,11 @@ public class Offer implements Serializable {
        private String Time;
        private String AllString;
        
-       private String IndustryCatalog;//ְ职业种类：IT，教育，金融
-       private String JobType;//工作类型：全职，实习，应届
-       private String Adress;//地址;
+       private String IndustryCatalog;//行业类别
+       private String JobType;//工作类型
+       private String Adress;//地址
        
-       /***************************���췽��*****************************************/
+       /***************************构造方法*****************************************/
        public Offer(){
     	   super();
        }
@@ -150,7 +150,7 @@ public class Offer implements Serializable {
 		 * @throws IllegalAccessException 
 		 * @throws SecurityException 
 		 * @throws NoSuchMethodException ***************************************/
-		//增加一条招聘信息，参数是对象
+		//增加一条招聘信息并更新link_hr_offer
 		public void add(Offer offer,String mail) throws NoSuchMethodException, 
 		                                                 SecurityException, 
 		                                                 IllegalAccessException, 
@@ -160,7 +160,7 @@ public class Offer implements Serializable {
 			OfferDA.add(offer,mail);
 			OfferDA.terminate();
 		}
-		//查询所有招聘信息返回对象list，参数是mail；
+		//查找招聘信息并返回list集合
 		public  List<Offer> find(String mail){
 			List<Offer> offerList=new ArrayList<Offer>();
 			OfferDA.getConnection();
