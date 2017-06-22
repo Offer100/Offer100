@@ -1,4 +1,6 @@
 package dao;
+//在一鹏完成之前暂时先注释。
+/*
 import redis.clients.jedis.*;
 public class frequencyDA {
 	static int[] results_times=new int[12];
@@ -22,3 +24,4 @@ public class frequencyDA {
     	 return results_times;
      }
 }
+*/

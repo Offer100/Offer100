@@ -1,16 +1,14 @@
 package model;
 
-
+import dao.Link_offer_hrDA;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import db.Link_offer_hrDA;
-
 public class Link_offer_hr {
       private int id;
       private String mail;
-      /**************************¹¹Ôì·½·¨*********************************/
+      /**************************ï¿½ï¿½ï¿½ì·½ï¿½ï¿½*********************************/
      public Link_offer_hr(){
     	
      }
@@ -19,7 +17,7 @@ public class Link_offer_hr {
 		this.id = id;
 		this.mail = mail;
 	 }
-	 /**************************getºÍset·½·¨*****************************/
+	 /**************************getï¿½ï¿½setï¿½ï¿½ï¿½ï¿½*****************************/
 	public int getId() {
 		return id;
 	}
@@ -32,7 +30,7 @@ public class Link_offer_hr {
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
-	/******************************ÆäËû·½·¨**********************************/
+	/******************************ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½**********************************/
 	public void add(int id,String mail){
 		Link_offer_hrDA.getConnection();
 		Link_offer_hrDA.add(id, mail);
