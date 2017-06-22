@@ -24,7 +24,7 @@ public class Link_offer_hrDA {
 			Class.forName(driver);
 			connection=DriverManager.getConnection(jdbcUrl,user,password);
 			statement=connection.createStatement();
-			System.out.println("数据库连接诶成功");
+			System.out.println("link鏁版嵁搴撻摼鎺ユ垚鍔燂紒");
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
 		}catch(SQLException e){
@@ -39,7 +39,6 @@ public class Link_offer_hrDA {
     	try {
 			statement.executeUpdate(sql);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     }
@@ -55,7 +54,6 @@ public class Link_offer_hrDA {
 			}
 			rs.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}    	
     	return idList;

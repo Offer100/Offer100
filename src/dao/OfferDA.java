@@ -9,12 +9,9 @@ import java.util.List;
 import model.Offer;
 import model.Link_offer_hr;
 public class OfferDA {
-//	static String[] industry_catalog=new String[]{"IT","½ğÈÚ","½ÌÓı"};
-//	static String[] job_type=new String[]{"ÊµÏ°","È«Ö°","Ó¦½ì"};
-//	static String[] adress_province
-	static List<String> industryCatalog=new ArrayList<String>(Arrays.asList("IT","½ğÈÚ","½ÌÓı"));
-	static List<String> jobType=new ArrayList<String>(Arrays.asList("ÊµÏ°","È«Ö°","Ó¦½ì"));
-	static List<String> adress=new ArrayList<String>(Arrays.asList("Îäºº","±±¾©","ÉÏº£","ÉîÛÚ","¹ãÖİ","º¼Öİ"));
+	static List<String> industryCatalog=new ArrayList<String>(Arrays.asList("IT","é‡‘è","æ•™è‚²"));
+	static List<String> jobType=new ArrayList<String>(Arrays.asList("å®ä¹ ","å…¨èŒÖ°","åº”å±Š"));
+	static List<String> adress=new ArrayList<String>(Arrays.asList("æ­¦æ±‰","åŒ—äº¬","ä¸Šæµ·","æ·±åœ³","å¹¿å·","æ­å·"));
 	
 	static List<Offer> offerList;
 	static Offer offer;
@@ -27,12 +24,12 @@ public class OfferDA {
 	static String jdbcUrl="jdbc:mysql://localhost:3306/offer100";	  
 	static String user="root";
 	static String password="wasd";
-	/*****************offerÀàÁ´½ÓµÄ³õÊ¼»¯**********************/
+	/*****************offerDAé“¾æ¥æ•°æ®åº“**********************/
 	public static Connection getConnection(){
 		try{
 			Class.forName(driver);
 			connection=DriverManager.getConnection(jdbcUrl,user,password);
-			System.out.println("Êı¾İ¿âÁ´½Ó³É¹¦£¡");
+			System.out.println("offeræ•°æ®åº“é“¾æ¥æˆåŠŸï¼");
 			statement=connection.createStatement();
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
@@ -41,18 +38,17 @@ public class OfferDA {
 		}
 		return connection;
 	}
-	/***********************Êı¾İ¿âÁ´½Ó¹Ø±Õ***************************/
+	/***********************æ•°æ®åº“å…³é—­***************************/
 	public static void terminate(){
 		try {
 			statement.close();
 			connection.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 	}
-	/***********************ĞÂÔöÒ»ÌõÕĞÆ¸ĞÅÏ¢,²¢¸üĞÂ¹ØÁª±ílink_hr_offer
+	/***********************å¢åŠ ä¸€æ¡æ–°çš„æ‹›è˜ä¿¡æ¯å¹¶æ›´æ–°link_hr_offer
 	 * @throws SecurityException 
 	 * @throws NoSuchMethodException 
 	 * @throws InvocationTargetException 
@@ -78,17 +74,18 @@ public class OfferDA {
 					//Statement.RETURN_GENERATED_KEYS);
 			pps.executeUpdate();
 			ResultSet rs=pps.getGeneratedKeys();
-			System.out.println("²åÈë³É¹¦");
+			System.out.println("æ’å…¥æˆåŠŸï¼");
 			if(rs.next()){
 				int num=rs.getInt(1);
 				System.out.println(num);
 				link.add(num, mail);
+				System.out.println("æ›´æ–°link_offer_hræˆåŠŸï¼ï¼");
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
 	}
-	/************************²éÑ¯ËùÓĞÕĞÆ¸ĞÅÏ¢·µ»Ølist*****************************/
+	/************************æ ¹æ®é‚®ç®±æŸ¥æ‰¾link_offer_hrçš„æ‹›è˜ä¿¡æ¯idï¼Œå»jobOfferè¡¨ä¸­æŸ¥æ‰¾æ‹›è˜ä¿¡æ¯ï¼Œè¿”å›å¯¹è±¡listé›†åˆ*****************************/
 	public static List<Offer> find(String mail){
 		offerList=new ArrayList<Offer>();
 		String sql="select * from jobOffer_table where id in (select id from link_hr_offer where mail='"+mail+"')order by Time desc";
@@ -118,8 +115,16 @@ public class OfferDA {
 		}
 		return offerList;
 	}
-	/*****************************************************/
-	public static void delete(int id,String mail){		
+	/**********************åˆ é™¤ä¸€æ¡æ‹›è˜ä¿¡æ¯*******************************/
+	public static void delete(int id,String mail){
+		String sql="delete from JobOffer_table where id='"+id+"'";
+		System.out.println(sql);
+		try {
+			statement.executeUpdate(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

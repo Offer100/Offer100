@@ -5,25 +5,24 @@ import model.HR;
 import model.Offer;
 
 public class hrDA {
-	static HR hr;                      //hr¶ÔÏó
- 	static List<Offer> list;           //ÕĞÆ¸ĞÅÏ¢µÄlist¼¯ºÏ
- 	static Connection connection=null; //Á´½ÓÆ÷
- 	static Statement statement=null;   //sqlÓïÑÔµÄ²Ù×÷Æ÷
- 	static PreparedStatement pps=null; //·ÀÖ¹sql×¢Èë
+	static HR hr;                     
+ 	static Connection connection=null; 
+ 	static Statement statement=null;   
+ 	static PreparedStatement pps=null; 
  	
  	static String driver="com.mysql.jdbc.Driver";
 	static String jdbcUrl="jdbc:mysql://localhost:3306/offer100";	  
 	static String user="root";
 	static String password="wasd";
-    /**************************************Á´½ÓÊı¾İ¿â**********************************************/
+    /**************************************æ•°æ®åº“é“¾æ¥**********************************************/
    	public static Connection getConnection() {  	  
     	try{
-    		//¼ÓÔØÇı¶¯³ÌĞò    		
+    		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½    		
 			Class.forName(driver);			
-    		//Á¬½ÓÊı¾İ¿â
+    		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ¿ï¿½
     		connection=DriverManager.getConnection(jdbcUrl,user,password);
     		statement=connection.createStatement();
-    		System.out.println("Succeed connecting database!");
+    		System.out.println("hræ•°æ®åº“é“¾æ¥æˆåŠŸ!");
     	}catch(ClassNotFoundException e){
     		e.printStackTrace();
     	}
@@ -32,7 +31,7 @@ public class hrDA {
     	}
     	return connection;		
    	}
-   	/****************************************¹Ø±ÕÊı¾İ¿â*********************************************/
+   	/****************************************å…³é—­æ•°æ®åº“*********************************************/
     public static void terminate(){   	
     	try {
     		statement.close();
@@ -42,7 +41,7 @@ public class hrDA {
 			e.printStackTrace();
 		}
     }
-    /**************************************ÓÃÓÊÏä²éÕÒÓÃ»§******************************************/
+    /**************************************hrä¿¡æ¯æŸ¥æ‰¾******************************************/
     public static HR find(String mail) throws NotFoundException{
     	hr=new HR();
     	String sql="select * from login_table where mail='"+mail+"'";
@@ -54,7 +53,7 @@ public class hrDA {
     			hr.setMail(rs.getString(1));
     			hr.setPassword(rs.getString(2));
     		}else{
-    			throw new NotFoundException("ÓÃ»§²»´æÔÚ£¡");
+    			throw new NotFoundException("ä¿¡æ¯ä¸å­˜åœ¨");
     		}
     		rs.close();
     	}catch (SQLException e){
@@ -62,25 +61,25 @@ public class hrDA {
     	}
     	return hr;
     }
-    /****************************************ÓÃ»§×¢²á**********************************************/
+    /***************************************æ³¨å†Œä¸€ä¸ªç”¨æˆ·**********************************************/
     public static void add(HR aHR){
     	String sql="insert into login_table(mail,password) values('"
     			+aHR.getMail()+"','"+aHR.getPassword()+"')";
     	System.out.println(sql);
     	try {
 			statement.executeUpdate(sql);
+			System.out.println("hræ·»åŠ æˆåŠŸ!");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     }
-    /****************************¼ì²âÃÜÂëºÍÕÊºÅÊÇ·ñÆ¥Åä£¬²¢·ÀÖ¹sql×¢Èë******************************/
+    /****************************ç”¨æˆ·ç™»å½•å¸å·å¯†ç åŒ¹é…æ£€æµ‹ï¼Œå¹¶é˜²æ­¢sqlæ³¨å…¥******************************/
     public static boolean checkUser(HR aHR) throws SQLException{
     	String sql="select * from login_table where mail=? and password=?";
     	ResultSet rs=null;
     	try {
 			pps=connection.prepareStatement(sql);
-			//¸ø²ÎÊı¸³Öµ£¬ÓÃset
 			pps.setString(1, aHR.getMail());
 	    	pps.setString(2, aHR.getPassword());
 	    	rs=pps.executeQuery();	    	
@@ -89,11 +88,4 @@ public class hrDA {
 		}
     	return rs.next();
     }
-    /***************************************½Ó¿Ú·½·¨ÖØĞ´*******************************************/
-	
-	public static void main(String[] args)throws Exception{
-//		hrDA user=new hrDA();
-//		hrDA.getConnection();
-	}
-
 }

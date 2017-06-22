@@ -12,11 +12,9 @@ public class HR implements Serializable{
 	 * 
 	 */
 	 private static final long serialVersionUID = 1L;
-	 private String mail;        //ÆóÒµÓÊÏä
-     private String password;   //ÃÜÂë
-     /*ÓÃÀ´´æ·ÅÕĞÆ¸ĞÅÏ¢¶ÔÏó*/
-     //private List<Offer> list=new ArrayList<Offer>();
-     /****************************Á½ÖÖ¹¹Ôì·½·¨***************************/
+	 private String mail;        //ä¼ä¸šé‚®ç®±
+     private String password;   //å¯†ç 
+     /****************************æ„é€ æ–¹æ³•***************************/
      public HR(){
     	 super();
      }
@@ -26,7 +24,7 @@ public class HR implements Serializable{
 		this.mail = mail;
 		this.password = password;
 	}
-	/*************************getºÍset·½·¨******************************/
+	/*************************getå’Œsetæ–¹æ³•******************************/
      public void setMail(String mail ){
     	  this.mail=mail;
       }
@@ -39,26 +37,27 @@ public class HR implements Serializable{
      public String getPassword(){
     	  return password;
       }
-     /****************************ÆäËû·½·¨****************************/
-     //Ìí¼ÓĞÂÓÃ»§
-     private void add(){
+     /****************************å…¶ä»–æ–¹æ³•***************************/
+     //å¢åŠ ä¸€æ¡hrä¿¡æ¯
+     public void add(HR hr){
     	 hrDA.getConnection();
-    	 hrDA.add(this);
+    	 hrDA.add(hr);
     	 hrDA.terminate();
      }
-     //¸ù¾İÓÊÏä²éÕÒÓÃ»§ĞÅÏ¢
-     private HR find(String mail) throws NotFoundException{
+     //æŸ¥æ‰¾hrï¼Œæ ¹æ®é‚®ç®±
+     public HR find(String mail) throws NotFoundException{
     	 hrDA.getConnection();
     	 HR aHR=hrDA.find(mail);
     	 hrDA.terminate();
     	 return aHR;
      }
-     //¼ì²éÓÃ»§µÇÂ¼ÕÊºÅÃÜÂëÊÇ·ñÒ»ÖÂ£¬²¢·ÀÖ¹sql×¢Èë
-     private boolean check(HR aHR) throws SQLException{
+     //ç™»å½•æ£€æŸ¥ï¼Œå¹¶é˜²æ­¢sqlè¯­è¨€æ³¨å…¥
+     public boolean check(HR aHR) throws SQLException{
     	 hrDA.getConnection();
     	 boolean gotIt=hrDA.checkUser(aHR);
     	 hrDA.terminate();
     	 return gotIt;
      }
+
      
 }
