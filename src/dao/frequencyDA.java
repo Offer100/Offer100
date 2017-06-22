@@ -1,6 +1,4 @@
-package dao;
-//在一鹏完成之前暂时先注释。
-/*
+package db;
 import redis.clients.jedis.*;
 public class frequencyDA {
 	static int[] results_times=new int[12];
@@ -10,7 +8,7 @@ public class frequencyDA {
 	}
      public void getConnection(){
     	 jedis=new Jedis("localhost");
-    	 System.out.println("���ӳɹ���");
+    	 System.out.println("���ӳɹ���");
     	 System.out.println("Server is running: "+jedis.ping());
      }
      public static void update(String key,String date){
@@ -24,4 +22,3 @@ public class frequencyDA {
     	 return results_times;
      }
 }
-*/

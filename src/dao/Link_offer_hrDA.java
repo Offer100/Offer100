@@ -1,9 +1,10 @@
-package dao;
+package db;
 
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
+import model.Link_offer_hr;
 
 public class Link_offer_hrDA {
 	static String driver="com.mysql.jdbc.Driver";
@@ -23,7 +24,7 @@ public class Link_offer_hrDA {
 			Class.forName(driver);
 			connection=DriverManager.getConnection(jdbcUrl,user,password);
 			statement=connection.createStatement();
-			System.out.println("���ݿ��������ɹ�");
+			System.out.println("link数据库链接成功！");
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
 		}catch(SQLException e){
@@ -38,7 +39,6 @@ public class Link_offer_hrDA {
     	try {
 			statement.executeUpdate(sql);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     }
@@ -54,7 +54,6 @@ public class Link_offer_hrDA {
 			}
 			rs.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}    	
     	return idList;

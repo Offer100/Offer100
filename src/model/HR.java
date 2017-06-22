@@ -1,6 +1,6 @@
 package model;
-import dao.NotFoundException;
-import dao.hrDA;
+import db.NotFoundException;
+import db.hrDA;
 
 import java.io.Serializable;
 import java.sql.SQLException;
@@ -15,9 +15,7 @@ public class HR implements Serializable{
 	 private static final long serialVersionUID = 1L;
 	 private String mail;        //企业邮箱
      private String password;   //密码
-     /*用来存放招聘信息对象*/
-     //private List<Offer> list=new ArrayList<Offer>();
-     /****************************两种构造方法***************************/
+     /****************************构造方法***************************/
      public HR(){
     	 super();
      }
@@ -40,26 +38,29 @@ public class HR implements Serializable{
      public String getPassword(){
     	  return password;
       }
-     /****************************其他方法****************************/
-     //添加新用户
-     public void add(){
+
+     /****************************其他方法***************************/
+     //增加一条hr信息
+     public void add(HR hr){
     	 hrDA.getConnection();
-    	 hrDA.add(this);
+    	 hrDA.add(hr);
     	 hrDA.terminate();
      }
-     //根据邮箱查找用户信息
+     //查找hr，根据邮箱
      public HR find(String mail) throws NotFoundException{
     	 hrDA.getConnection();
     	 HR aHR=hrDA.find(mail);
     	 hrDA.terminate();
     	 return aHR;
      }
-     //检查用户登录帐号密码是否一致，并防止sql注入
+
+     //登录检查，并防止sql语言注入
      public boolean check(HR aHR) throws SQLException{
     	 hrDA.getConnection();
     	 boolean gotIt=hrDA.checkUser(aHR);
     	 hrDA.terminate();
     	 return gotIt;
      }
+
      
 }
