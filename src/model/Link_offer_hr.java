@@ -1,14 +1,16 @@
 package model;
 
-import dao.Link_offer_hrDA;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
+import db.Link_offer_hrDA;
+
 public class Link_offer_hr {
       private int id;
       private String mail;
-      /**************************���췽��*********************************/
+      /**************************构造方法*********************************/
      public Link_offer_hr(){
     	
      }
@@ -17,7 +19,7 @@ public class Link_offer_hr {
 		this.id = id;
 		this.mail = mail;
 	 }
-	 /**************************get��set����*****************************/
+	 /**************************get和set方法*****************************/
 	public int getId() {
 		return id;
 	}
@@ -30,7 +32,7 @@ public class Link_offer_hr {
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
-	/******************************��������**********************************/
+	/******************************其他方法**********************************/
 	public void add(int id,String mail){
 		Link_offer_hrDA.getConnection();
 		Link_offer_hrDA.add(id, mail);
@@ -40,9 +42,5 @@ public class Link_offer_hr {
 		Link_offer_hrDA.getConnection();
 		idList=Link_offer_hrDA.find(mail);
 		return idList;
-	}
-	public static void main(String[] args) {
-		Link_offer_hr link=new Link_offer_hr();
-        link.add(29,"17151239874@qq.com");		
 	}
 }
