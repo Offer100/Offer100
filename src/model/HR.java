@@ -1,22 +1,23 @@
 package model;
-import java.io.*;
+import dao.NotFoundException;
+import dao.hrDA;
+
+import java.io.Serializable;
 import java.sql.SQLException;
+
 //import java.util.ArrayList;
 //import java.util.List;
-
-import db.hrDA;
-import db.NotFoundException;
 
 public class HR implements Serializable{
      /**
 	 * 
 	 */
 	 private static final long serialVersionUID = 1L;
-	 private String mail;        //ÆóÒµÓÊÏä
-     private String password;   //ÃÜÂë
-     /*ÓÃÀ´´æ·ÅÕĞÆ¸ĞÅÏ¢¶ÔÏó*/
+	 private String mail;        //ä¼ä¸šé‚®ç®±
+     private String password;   //å¯†ç 
+     /*ç”¨æ¥å­˜æ”¾æ‹›è˜ä¿¡æ¯å¯¹è±¡*/
      //private List<Offer> list=new ArrayList<Offer>();
-     /****************************Á½ÖÖ¹¹Ôì·½·¨***************************/
+     /****************************ä¸¤ç§æ„é€ æ–¹æ³•***************************/
      public HR(){
     	 super();
      }
@@ -26,7 +27,7 @@ public class HR implements Serializable{
 		this.mail = mail;
 		this.password = password;
 	}
-	/*************************getºÍset·½·¨******************************/
+	/*************************getå’Œsetæ–¹æ³•******************************/
      public void setMail(String mail ){
     	  this.mail=mail;
       }
@@ -39,21 +40,21 @@ public class HR implements Serializable{
      public String getPassword(){
     	  return password;
       }
-     /****************************ÆäËû·½·¨****************************/
-     //Ìí¼ÓĞÂÓÃ»§
+     /****************************å…¶ä»–æ–¹æ³•****************************/
+     //æ·»åŠ æ–°ç”¨æˆ·
      private void add(){
     	 hrDA.getConnection();
     	 hrDA.add(this);
     	 hrDA.terminate();
      }
-     //¸ù¾İÓÊÏä²éÕÒÓÃ»§ĞÅÏ¢
+     //æ ¹æ®é‚®ç®±æŸ¥æ‰¾ç”¨æˆ·ä¿¡æ¯
      private HR find(String mail) throws NotFoundException{
     	 hrDA.getConnection();
     	 HR aHR=hrDA.find(mail);
     	 hrDA.terminate();
     	 return aHR;
      }
-     //¼ì²éÓÃ»§µÇÂ¼ÕÊºÅÃÜÂëÊÇ·ñÒ»ÖÂ£¬²¢·ÀÖ¹sql×¢Èë
+     //æ£€æŸ¥ç”¨æˆ·ç™»å½•å¸å·å¯†ç æ˜¯å¦ä¸€è‡´ï¼Œå¹¶é˜²æ­¢sqlæ³¨å…¥
      private boolean check(HR aHR) throws SQLException{
     	 hrDA.getConnection();
     	 boolean gotIt=hrDA.checkUser(aHR);
