@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
     <welcome-file-list>
-        <welcome-file>login.jsp</welcome-file>
+        <welcome-file>JobSearch.jsp</welcome-file>
     </welcome-file-list>
 
     <servlet>
@@ -38,6 +38,61 @@
     <servlet-mapping>
         <servlet-name>SubmitNewInfoServlet</servlet-name>
         <url-pattern>/control/SubmitNewInfoServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>TrendSearcherServlet</display-name>
+        <servlet-name>TrendSearcherServlet</servlet-name>
+        <servlet-class>control.TrendSearcherServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TrendSearcherServlet</servlet-name>
+        <url-pattern>/control/TrendSearcherServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>SubscriptionServlet</display-name>
+        <servlet-name>SubscriptionServlet</servlet-name>
+        <servlet-class>control.SubscriptionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SubscriptionServlet</servlet-name>
+        <url-pattern>/control/SubscriptionServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>JobSearcherServlet</display-name>
+        <servlet-name>JobSearcherServlet</servlet-name>
+        <servlet-class>control.JobSearcherServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>JobSearcherServlet</servlet-name>
+        <url-pattern>/control/JobSearcherServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>ManageJobInfoServlet</display-name>
+        <servlet-name>ManageJobInfoServlet</servlet-name>
+        <servlet-class>control.ManageJobInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ManageJobInfoServlet</servlet-name>
+        <url-pattern>/control/ManageJobInfoServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>DeleteInfoServlet</display-name>
+        <servlet-name>DeleteInfoServlet</servlet-name>
+        <servlet-class>control.DeleteInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteInfoServlet</servlet-name>
+        <url-pattern>/control/DeleteInfoServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>

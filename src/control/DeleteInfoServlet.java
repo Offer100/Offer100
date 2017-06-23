@@ -28,23 +28,29 @@ public class DeleteInfoServlet extends HttpServlet {
         List<Offer> Offers=null;
         Offer temp=new Offer();
         HR aHR=(HR)session.getAttribute("HR");
-        if(aHR==null){
+        if(aHR==null||aHR.getMail()==null){
             //若session失效，跳转到登录界面
             session.setAttribute("wrongMsg","登录过期，请重新登录");
             resp.sendRedirect("../login.jsp");
         }
         //HR信息未失效。
-        if(ids!=null&&ids.length()>0){
+        else if(ids!=null&&ids.length()>0){
             //为非空字符串时：
             deleteIds= Arrays.asList(ids.split(","));
             for(int i=0;i<deleteIds.size();i++){
                 int Offerid=Integer.parseInt(deleteIds.get(i));
-                temp.delete(Offerid,aHR.getMail());
+                //前面已经做过验证
+                //TODO
+                //数据库部署前注释掉。
+                //temp.delete(Offerid,aHR.getMail());
             }
+            //设置新的弹窗信息。
             session.setAttribute("wrongMsg","已成功删除信息");
             //获取新的OfferList
-            Offers=temp.find(aHR.getMail());
+            //数据库部署前注释掉。
+           // Offers=temp.find(aHR.getMail());
         }
+        //删除id列表为空。
         session.setAttribute("wrongMsg","请选择删除内容");
         session.setAttribute("delete_list",Offers);
 

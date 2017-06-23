@@ -47,7 +47,7 @@
 							<li class="active"><a href="HR_home.jsp">主页</a></li>
 							<li ><a href="HR_newInfo.jsp">发布</a></li>
 							<li><a href="HR_search.jsp">查询</a></li>
-							<li><a href="HR_managerment.html">管理</a></li>
+							<li><a href="HR_management.jsp">管理</a></li>
 						</ul> 
 						<div class="social-icons">
 							<ul>

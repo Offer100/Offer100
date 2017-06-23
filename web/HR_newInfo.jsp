@@ -10,15 +10,16 @@
 	%>
 	<script type="text/javascript">
 		var type=window.confirm("<%=wrongMsg%>");
+		<%
+		//清除错误信息
+		 session.setAttribute("wrongMsg", "");
+		%>
 		if(type==true){
 		    //确认返回
 			window.location.href="../Offer100/HR_home.jsp";
 		}
 	</script>
-	<%
-			//消除错误信息
-			session.setAttribute("wrongMsg", "");
-		}%>
+	<%}%>
 <title>发布新招聘信息</title>
 <meta charset="gb2312">
 <link rel="stylesheet" type="text/css" href="css/myStyle.css">
@@ -65,7 +66,7 @@
 							<li ><a href="HR_home.jsp">主页</a></li>
 							<li class="active"><a href="HR_newInfo.jsp">发布</a></li>
 							<li><a href="HR_search.jsp">查询</a></li>
-							<li><a href="HR_managerment.jsp">管理</a></li>
+							<li><a href="HR_management.jsp">管理</a></li>
 						</ul> 
 						<div class="social-icons">
 							<ul>

@@ -67,7 +67,7 @@
 							<li ><a href="HR_home.jsp">主页</a></li>
 							<li class="active"><a href="HR_newInfo.jsp">发布</a></li>
 							<li><a href="HR_search.jsp">查询</a></li>
-							<li><a href="HR_managerment.jsp">管理</a></li>
+							<li><a href="HR_management.jsp">管理</a></li>
 						</ul> 
 						<div class="social-icons">
 							<ul>
@@ -105,24 +105,20 @@
 			<div class="clearfix"> </div>
 			
 			<%
-				ArrayList list = (ArrayList) session.getAttribute("delete_list");
+				ArrayList<Offer> list = (ArrayList<Offer>) session.getAttribute("delete_list");
 				if(list==null||list.size()>0){
 				    //list不存在或为空
-			%>
-			<script type="text/javascript">
-				alert("没有可删除的招聘信息！");
-			</script>
-			<%
-				}else{
-			%>
+				    //
+			}else{%>
+
 			<table>
 			<%for (int i=0;i<list.size();i++){
-				Offer myOffer=new Offer();
+				Offer myOffer;
 				myOffer=(Offer)list.get(i);%>
 				<form method="post" action="control/DeleteInfoServlet">
-				<tr><td><input type="checkbox" name="delete-name" value=<%myOffer.getId();%>></td><td><%myOffer.getJobName();%></td><td><%myOffer.getTime();%></td></tr>
+				<tr><td><input type="checkbox" name="delete-name" value="<%=myOffer.getId()%>"></td><td><%myOffer.getJobName();%></td><td><%myOffer.getTime();%></td></tr>
 			<%}
-			out.println("<td><input type='submit' name='delet_btn' value='删除'onclick='check_box()'></td>");
+			out.println("<td><input type='submit' name='delete_btn' value='删除'onclick='check_box()'></td>");
 			}
 			%>
 					<input type="text" name="id_box" style="display: none" ></input>
