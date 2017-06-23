@@ -1,8 +1,8 @@
 package model;
+import dao.FrequencyDA;
+
 import java.util.HashMap;
 import java.util.Map;
-
-import db.FrequencyDA;
 public class Frequency {
 	  /****************************构造方法********************************************/
       public Frequency(){    	  

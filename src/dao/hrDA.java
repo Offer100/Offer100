@@ -1,8 +1,7 @@
-package db;
-import java.sql.*;
-import java.util.*;
+package dao;
 import model.HR;
-import model.Offer;
+
+import java.sql.*;
 
 public class hrDA {
 	static HR hr;                     

@@ -1,12 +1,10 @@
 package model;
-import java.io.*;
-import java.sql.SQLException;
+import dao.subDA;
+
+import java.io.Serializable;
+
 //import java.util.ArrayList;
 //import java.util.List;
-
-import db.hrDA;
-import db.subDA;
-import db.NotFoundException;
 
 public class Sub implements Serializable{
      /**

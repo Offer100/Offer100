@@ -1,10 +1,9 @@
-package db;
+package dao;
 
 
 import java.sql.*;
-import java.util.*;
-
-import model.Link_offer_hr;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Link_offer_hrDA {
 	static String driver="com.mysql.jdbc.Driver";

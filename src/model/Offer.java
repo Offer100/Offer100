@@ -1,11 +1,11 @@
 package model;
 
+import dao.OfferDA;
+
 import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
-
-import db.OfferDA;
 
 
 public class Offer implements Serializable {

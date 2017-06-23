@@ -2,10 +2,10 @@ package model;
 
 
 
+import dao.Link_offer_hrDA;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import db.Link_offer_hrDA;
 
 public class Link_offer_hr {
       private int id;
