@@ -1,11 +1,12 @@
 package model;
-import java.io.*;
+import dao.NotFoundException;
+import dao.hrDA;
+
+import java.io.Serializable;
 import java.sql.SQLException;
+
 //import java.util.ArrayList;
 //import java.util.List;
-
-import db.hrDA;
-import db.NotFoundException;
 
 public class HR implements Serializable{
      /**
@@ -37,6 +38,7 @@ public class HR implements Serializable{
      public String getPassword(){
     	  return password;
       }
+
      /****************************其他方法***************************/
      //增加一条hr信息
      public void add(HR hr){
@@ -51,6 +53,7 @@ public class HR implements Serializable{
     	 hrDA.terminate();
     	 return aHR;
      }
+
      //登录检查，并防止sql语言注入
      public boolean check(HR aHR) throws SQLException{
     	 hrDA.getConnection();

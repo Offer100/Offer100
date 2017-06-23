@@ -1,22 +1,13 @@
-package db;
+package dao;
+import redis.clients.jedis.Jedis;
+
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Date;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
+
 //import java.util.regex.Matcher;
 //import java.util.regex.Pattern;
-
 //import javassist.bytecode.Descriptor.Iterator;
-import redis.clients.jedis.*;
 public class FrequencyDA {
-
 	static private Jedis jedis;
 	public FrequencyDA() {
 		// TODO Auto-generated constructor stub
