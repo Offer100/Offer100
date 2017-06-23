@@ -22,5 +22,9 @@ public class Frequency {
     	  FrequencyDA.getConnection();
     	  FrequencyDA.update(key,day);
       }
-      
+      /**********************************定时更新****************************************/
+      public void TimedUpdate(int hour,int minute,int second){
+    	  FrequencyDA.getConnection();
+    	  FrequencyDA.TimedUpdate(hour, minute, second);
+      }
 }
