@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Home</title>
+	<%@ page contentType="text/html; charset=UTF-8" %>
+	<%
+		String wrongMsg=(String)session.getAttribute("wrongMsg");
+		if(wrongMsg==null||wrongMsg.equals("")){
+		    //不需要弹窗
+		}else{
+	%>
+	<script type="text/javascript">
+		var type=window.confirm("<%=wrongMsg%>");
+		if(type==true){
+		    //确认返回
+			window.location.href="../Offer100/HR_home.jsp";
+		}
+	</script>
+	<%}%>
+<title>发布新招聘信息</title>
+<meta charset="gb2312">
+<link rel="stylesheet" type="text/css" href="css/myStyle.css">
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
 <!--web-font-->
@@ -14,11 +31,8 @@
 <meta name="keywords" content="Plot Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //Custom Theme files -->
-<!-- js -->
+
 <script src="js/jquery-1.11.1.min.js"></script> 
-<!-- //js -->	
-<!-- start-smoth-scrolling-->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>	
 <script type="text/javascript">
@@ -35,7 +49,9 @@
 	<div class="container-fluid">
 		<div class="row">
 			<!--side-bar-->
-			<div class="col-sm-3 col-md-2 sidebar">
+	
+					<!-- script-for-menu -->
+						 <div class="col-sm-3 col-md-2 sidebar">
 				<div class="logo">
 					<a href="index.html"><img src="images/logo.png" alt="logo"/></a>
 				</div>
@@ -43,10 +59,10 @@
 					<span class="menu-icon"><img src="images/menu-icon.png" alt=""/></span>	
 					<div class="nav1">
 						<ul class=" nav nav-sidebar">
-							<li class="active"><a href="HR_home.html">主页</a></li>
-							<li ><a href="HR_newInfo.html">发布</a></li>
-							<li><a href="HR_search.html">查询</a></li>
-							<li><a href="HR_managerment.html">管理</a></li>
+							<li ><a href="HR_home.jsp">主页</a></li>
+							<li class="active"><a href="HR_newInfo.jsp">发布</a></li>
+							<li><a href="HR_search.jsp">查询</a></li>
+							<li><a href="HR_delete.jsp">管理</a></li>
 						</ul> 
 						<div class="social-icons">
 							<ul>
@@ -70,23 +86,51 @@
 				<div class="clearfix"> </div>				
 				<p>Copyright &copy;offer100</p>
 			</div>
-			<!--//side-bar-->
+
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-				<!--banner-->
-				<div class="banner">
-					<div class="jumbotron banner-text">
-						<h2>欢迎回到主页</h2>
-						<p>您在这里可以发布新的招聘任务</p>
-						<a class="btn btn-primary" href="HR_newInfo.html" role="button">发布</a>
-					</div>
-				</div>  
-				
+
+			
+			<div class="col-md-8 info-form ">
+				<h4>发布新招聘信息</h4>
+				<form id="newJobInfoForm" method="post" action="control/SubmitNewInfoServlet">
+				<label>招聘公司：<input type="text" name="company" id="company">
+				工作地点：
+					<select name="workplace">
+					<option value="wuhan">武汉</option>
+					<option value="beijing">北京</option>
+					<option value="hangzhou">杭州</option>
+					<option value="shanghai">上海</option>
+					<option value="shenzhen">深圳</option>
+					<option value="guangzhou">广州</option>
+				</select></label>
+				<label>
+				</input>职务名称：<input type="text" name="position" id="position"></input>
+				行业类别：
+				<select name="industry-category">
+					<option value="IT">IT</option>
+					<option value="finance">金融</option>
+					<option value="education">教育</option>
+				</select>
+				</label>
+				<label>工作技能：<input type="text"name="work-skill" id="work-skill"></input>工作薪酬：<input type="text" name="wage" id="wage"></input></label>
+				<label>联系方式：<input type="text" name="phone" id="phone"></input>
+				工作类型：
+					<select name="job_category">
+						<option value="intern">实习</option>
+						<option value="full_time">全职</option>
+						<option value="fresh">应届</option>
+					</select></label>
+					<label><textarea type="text" name="details" id="details" class="det" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '详细信息...';}" required="">详细信息...</textarea></label>
+					<!--<input type="submit" name="submit" value="提交"></input>-->
+					<input type="button" name="newInfo" value="提交" onclick="notNullSubmit()">
+				</form>
 			</div>
-		</div>	
+			</div>
+
 	</div>	
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+
+	</div>
     <script src="js/bootstrap.js"> </script>
+<script src="js/newInfoJS.js"></script>
 </body>
 </html>

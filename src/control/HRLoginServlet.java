@@ -37,7 +37,7 @@ public class HRLoginServlet extends HttpServlet {
                 //重定向到HR招聘信息管理界面
                 session.setAttribute("HR",aHR);
                 //获取
-                resp.sendRedirect("../HR_home.html");
+                resp.sendRedirect("../HR_home.jsp");
 
                 //TODO
                 /*
@@ -54,7 +54,7 @@ public class HRLoginServlet extends HttpServlet {
                     }
                 }
                 session.setAttribute("OfferList",offersToShow);
-                resp.sendRedirect("../HR_home.html");
+                resp.sendRedirect("../HR_home.jsp");
                  */
             }else{
                 //匹配失败

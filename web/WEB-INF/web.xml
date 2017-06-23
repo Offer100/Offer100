@@ -29,4 +29,15 @@
         <url-pattern>/control/HRSignUpServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <display-name>SubmitNewInfoServlet</display-name>
+        <servlet-name>SubmitNewInfoServlet</servlet-name>
+        <servlet-class>control.SubmitNewInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SubmitNewInfoServlet</servlet-name>
+        <url-pattern>/control/SubmitNewInfoServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>
