@@ -40,30 +40,12 @@ public class HRLoginServlet extends HttpServlet {
                 resp.sendRedirect("../HR_home.jsp");
 
                 //TODO
-                /*
-                offers=temp.find(aHR.getMail());
-                if(offers.size()<=5){
-                    //小于五条直接显示
-                    //页面上判断一下大小是否为0;
-                    offersToShow=offers;
-                }else {
-                    //多于五条取前五条
-                    for(int i=0;i<6;i++){
-                        temp=offers.get(i);
-                        offersToShow.add(temp);
-                    }
-                }
-                session.setAttribute("OfferList",offersToShow);
-                resp.sendRedirect("../HR_home.jsp");
-                 */
             }else{
                 //匹配失败
                 //重定向至登录界面
                 session.setAttribute("wrongMsg","用户密码不匹配，请核对!");
                 resp.sendRedirect("../login.jsp");
                 //TEST
-                //
-
             }
         } catch (Exception e) {
             //SQL错误

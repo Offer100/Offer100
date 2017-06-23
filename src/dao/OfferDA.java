@@ -1,13 +1,14 @@
 package dao;
 
+
+import model.Link_offer_hr;
+import model.Offer;
+
 import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import model.Offer;
-import model.Link_offer_hr;
 public class OfferDA {
 	static List<String> industryCatalog=new ArrayList<String>(Arrays.asList("IT","金融","教育"));
 	static List<String> jobType=new ArrayList<String>(Arrays.asList("实习","全职ְ","应届"));

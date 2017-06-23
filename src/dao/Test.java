@@ -13,18 +13,13 @@ public class Test {
 //		hr.add(hr);
 //	}
 /***********************测试redis**************************************/
-//	public static void main(String[] args) {
-//		// TODO Auto-generated method stub
-////		   int[] re=new int[]{};
-////           frequencyDA fd=new frequencyDA();
-////           fd.getConnection();
-////           String[] date=new String[]{"2017-01","2017-02"};
-////           re=fd.search("java", date);
-////           System.out.println(re.length+"!!!!!!!!!!");
-////           for(int i=0;i<re.length;i++){
-////        	   System.out.println(re[i]);
-////           }
-//	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Frequency frenquency=new Frequency();
+		 frenquency.update("java","2017-06-21");
+         frenquency.searchAll("java", 10);
+        
+	}
 /*******************************测试offer*******************************/
 //	public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
 //		Offer offer=new Offer();
@@ -49,8 +44,8 @@ public class Test {
 //		}      
 //	}
 /*****************************测试订阅*****************************************/
-	public static void main(String[] args) {
-		Sub sub=new Sub("12345678@qq.com","java");
-        sub.add();
-	}
+//	public static void main(String[] args) {
+//		Sub sub=new Sub("12345678@qq.com","java");
+//        sub.add();
+//	}
 }
