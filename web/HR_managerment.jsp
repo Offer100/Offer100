@@ -1,26 +1,27 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+ <%@ page language="java" import="java.util.*"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<%@ page contentType="text/html; charset=UTF-8" %>
-	<%
-		String wrongMsg=(String)session.getAttribute("wrongMsg");
-		if(wrongMsg==null||wrongMsg.equals("")){
-		    //不需要弹窗
-		}else{
-	%>
+
+<!--导入javabean-->
+<%@ page import="model.Offer" %>
+<%
+	String wrongMsg=(String)session.getAttribute("wrongMsg");
+	if(wrongMsg==null||wrongMsg.equals("")){}
+	else{
+%>
 	<script type="text/javascript">
-		var type=window.confirm("<%=wrongMsg%>");
-		if(type==true){
-		    //确认返回
-			window.location.href="../Offer100/HR_home.jsp";
-		}
+		alert("<%=wrongMsg%>");
 	</script>
-	<%
-			//消除错误信息
-			session.setAttribute("wrongMsg", "");
-		}%>
-<title>发布新招聘信息</title>
-<meta charset="gb2312">
+	<%		//取消wrongMsg；
+			session.setAttribute("wrongMsg","");
+	}
+	%>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>管理招聘信息</title>
 <link rel="stylesheet" type="text/css" href="css/myStyle.css">
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
@@ -34,8 +35,11 @@
 <meta name="keywords" content="Plot Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-
+<!-- //Custom Theme files -->
+<!-- js -->
 <script src="js/jquery-1.11.1.min.js"></script> 
+<!-- //js -->	
+<!-- start-smoth-scrolling-->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>	
 <script type="text/javascript">
@@ -52,9 +56,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<!--side-bar-->
-	
-					<!-- script-for-menu -->
-						 <div class="col-sm-3 col-md-2 sidebar">
+					<div class="col-sm-3 col-md-2 sidebar">
 				<div class="logo">
 					<a href="index.html"><img src="images/logo.png" alt="logo"/></a>
 				</div>
@@ -89,51 +91,61 @@
 				<div class="clearfix"> </div>				
 				<p>Copyright &copy;offer100</p>
 			</div>
-
-			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-
-			
-			<div class="col-md-8 info-form ">
-				<h4>发布新招聘信息</h4>
-				<form id="newJobInfoForm" method="post" action="control/SubmitNewInfoServlet">
-				<label>招聘公司：<input type="text" name="company" id="company">
-				工作地点：
-					<select name="workplace">
-					<option value="wuhan">武汉</option>
-					<option value="beijing">北京</option>
-					<option value="hangzhou">杭州</option>
-					<option value="shanghai">上海</option>
-					<option value="shenzhen">深圳</option>
-					<option value="guangzhou">广州</option>
-				</select></label>
-				<label>
-				</input>职务名称：<input type="text" name="position" id="position"></input>
-				行业类别：
-				<select name="industry-category">
-					<option value="IT">IT</option>
-					<option value="finance">金融</option>
-					<option value="education">教育</option>
-				</select>
-				</label>
-				<label>工作技能：<input type="text"name="work-skill" id="work-skill"></input>工作薪酬：<input type="text" name="wage" id="wage"></input></label>
-				<label>联系方式：<input type="text" name="phone" id="phone"></input>
-				工作类型：
-					<select name="job_category">
-						<option value="intern">实习</option>
-						<option value="full_time">全职</option>
-						<option value="fresh">应届</option>
-					</select></label>
-					<label><textarea type="text" name="details" id="details" class="det" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '详细信息...';}" required="">详细信息...</textarea></label>
-					<!--<input type="submit" name="submit" value="提交"></input>-->
-					<input type="button" name="newInfo" value="提交" onclick="notNullSubmit()">
+			<!--//side-bar-->
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main about-main manager">
+			<div class="services">
+			<p>请输入要删除的职位和发布的时间进行查询</p>
+			</div>
+				<form id="deleteForm" method="post" action="control/ManageJobInfoServlet">
+			<input type="text" value="职位" name="position" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '职位';}" required="">
+			<input type="text" value="发布时间..输入格式yyyy-mm-dd" name="date-time" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '发布时间..输入格式yyyy-mm-dd';}" required="">
+			<input type="submit" value="查找" name="search">
 				</form>
 			</div>
-			</div>
+			<div class="clearfix"> </div>
+			
+			<%
+				ArrayList list = (ArrayList) session.getAttribute("delete_list");
+				if(list==null||list.size()>0){
+				    //list不存在或为空
+			%>
+			<script type="text/javascript">
+				alert("没有可删除的招聘信息！");
+			</script>
+			<%
+				}else{
+			%>
+			<table>
+			<%for (int i=0;i<list.size();i++){
+				Offer myOffer=new Offer();
+				myOffer=(Offer)list.get(i);%>
+				<form method="post" action="control/DeleteInfoServlet">
+				<tr><td><input type="checkbox" name="delete-name" value=<%myOffer.getId();%>></td><td><%myOffer.getJobName();%></td><td><%myOffer.getTime();%></td></tr>
+			<%}
+			out.println("<td><input type='submit' name='delet_btn' value='删除'onclick='check_box()'></td>");
+			}
+			%>
+					<input type="text" name="id_box" style="display: none" ></input>
+				</form>
+			</table>
 
-	</div>	
 
-	</div>
+			<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.js"> </script>
-<script src="js/newInfoJS.js"></script>
+     <script type="text/javascript">
+     function check_box(){
+     	var obj=document.getElementsByName("delete-name");
+     	var form=document.getElementById("deleteForm");
+     	var check_val=new Array();
+     	for(k in obj){
+     		if(obj[k].checked)
+     			check_val.push(obj[k].value)
+     	}
+     	document.getElementsByName("id_box").value=check_val;
+		 form.submit();
+     }
+     </script>
 </body>
 </html>

@@ -36,6 +36,7 @@ public class HRLoginServlet extends HttpServlet {
                 //匹配成功
                 //重定向到HR招聘信息管理界面
                 session.setAttribute("HR",aHR);
+                session.setAttribute("wrongMsg","");
                 //获取
                 resp.sendRedirect("../HR_home.jsp");
 

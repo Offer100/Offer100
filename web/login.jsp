@@ -66,7 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<span class="icon-bar"></span>
 					  </button>
 						<div class="logo">
-							<a class="navbar-brand" href="login.html">Offer100<span>让优秀的人才遇见更好的机会
+							<a class="navbar-brand" href="login.jsp">Offer100<span>让优秀的人才遇见更好的机会
 							</span></a>
 						</div>
 					</div>
