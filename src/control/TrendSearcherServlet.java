@@ -17,6 +17,8 @@ public class TrendSearcherServlet extends HttpServlet {
         String hotword=req.getParameter("hotword");
 
 
+
+
         //
         System.out.println("ok");
         resp.sendRedirect("../TrendSearchersResult.jsp");

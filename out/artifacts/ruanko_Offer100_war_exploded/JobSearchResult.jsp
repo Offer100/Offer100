@@ -1,15 +1,28 @@
 <%@ page import="model.Offer" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html >
 <head>
     <%@ page contentType="text/html; charset=UTF-8" %>
+    <%
+        String wrongMsg=(String)session.getAttribute("wrongMsg");
+        if(wrongMsg==null||wrongMsg.equals("")){
+            //不弹窗
+        }else{
+    %>
+    <script type="text/javascript">
+        alert("<%=wrongMsg%>");
+    </script>
+    <%}
+        session.setAttribute("wrongMsg","");
+    %>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>TrendSearchersResult-Page</title>
 </head>
 <body>
    <div id="background" style="position:absolute; left:0px; top:0px; width:100%; height:100%;">
-      <img src="background1ForJobSearchResult.jpg" width="100%" height="100%"/>
+      <img src="images/background1ForJobSearchResult.jpg" width="100%" height="100%"/>
     <div style="position:absolute;width:100%;height:100%;z-indent:2;left:0;top:0;background-color:rgba(210,210,210,0.6); "id="searchResultPage"> 
       <div style="text-align:right;">
        <br /><br />
@@ -44,7 +57,7 @@
                        </td>         
                      </tr>
                      <%
-                         ArrayList list = (ArrayList) session.getAttribute("search_list");
+                         List<Offer> list = (ArrayList<Offer>) session.getAttribute("search_list");
                          if(list!=null){
                              Offer myOffer=null;
                      %>
@@ -71,7 +84,7 @@
            <p style="text-align:center;font-size:20px;font-family:'宋体';"><b>订阅招聘信息</b></p>
            <p style="text-align:left;font-size:18px;font-family:'宋体';margin-left:5%;">我的电子邮箱地址：</p>
                 <form method="post" action="control/SubscriptionServlet">
-           <input  type="text" id="email" style="width:80%;height:20px;margin-left:5%;"/>
+           <input  type="text" name="email" style="width:80%;height:20px;margin-left:5%;"/>
            <select name="industry-category"
                    style="width:81%;height:20px;margin-left:5%;">
                <option id="IT">IT</option>

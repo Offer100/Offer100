@@ -4,7 +4,7 @@
     <%@ page contentType="text/html; charset=UTF-8" %>
     <%
         String wrongMsg=(String)session.getAttribute("wrongMsg");
-        if(wrongMsg==null&&wrongMsg.equals("")){
+        if(wrongMsg==null||wrongMsg.equals("")){
             //不显示弹窗
         }else{
     %>
@@ -23,7 +23,7 @@
        <div style="position:absolute;width:100%;height:100%;z-indent:2;left:0;top:0;"id="hotwordpage"> 
       <div style="text-align:right;">
        <br /><br />
-       <a href="HR_home.jsp" style="color:#000;font-family:'宋体';font-size:20px;"><b>回到首页</b></a>&nbsp
+       <a href="JobSearch.jsp" style="color:#000;font-family:'宋体';font-size:20px;"><b>回到首页</b></a>&nbsp
         <a href="login.jsp" style="color:#000;font-family:'宋体';font-size:20px;"><b>登录/注册</b></a>&nbsp;&nbsp;&nbsp;&nbsp;
           <a href="TrendSearchers.jsp"><b>返回查询界面</b></a>&nbsp;&nbsp;&nbsp;&nbsp;
        </div> 

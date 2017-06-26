@@ -19,6 +19,7 @@ public class SubscriptionServlet extends HttpServlet {
         HttpSession session=req.getSession();
         String email=req.getParameter("email");
         String direction=req.getParameter("industry-category");
+        String fromURL = req.getHeader("referer");
         if(email!=null&&direction!=null) {
             Sub mSub = new Sub(email, direction);
 
@@ -26,11 +27,13 @@ public class SubscriptionServlet extends HttpServlet {
             //mSub.add();
 
             //保存处理结果
-            session.setAttribute("wrongMsg", "订阅邮箱：" + mSub.getMail()+"\n订阅信息："+mSub.getDirection()+"\n已保存成功");
-            resp.sendRedirect("../TrendSearcher.jsp");
+            System.out.println("here");
+            //session.setAttribute("wrongMsg","good");
+            session.setAttribute("wrongMsg", "订阅邮箱："+mSub.getMail()+"订阅信息："+mSub.getDirection()+"已保存成功");
         }else{
             session.setAttribute("wrongMsg","订阅失败，请重试");
-            resp.sendRedirect("../TrendSearcher.jsp");
         }
+
+        resp.sendRedirect("../JobSearchResult.jsp");
     }
 }

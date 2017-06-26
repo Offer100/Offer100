@@ -42,7 +42,9 @@ public class JobSearcherServlet extends HttpServlet {
         session.setAttribute("wrongMsg","");
         if(Offers==null||Offers.size()<=0){
             //Offers为空的错误处理
-            session.setAttribute("wrongMsg","没有对应的招聘信息，是否返回查询界面?");
+            session.setAttribute("wrongMsg","没有对应的招聘信息");
+        }else {
+            session.setAttribute("wrongMsg", "查询成功");
         }
         session.setAttribute("search_list",Offers);
         resp.sendRedirect("../JobSearchResult.jsp");
