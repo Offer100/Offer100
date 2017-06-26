@@ -20,6 +20,7 @@ public class SubmitNewInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         HttpSession session=req.getSession();
+
         //获取此时的系统时间
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
         Date currentTime=new Date();

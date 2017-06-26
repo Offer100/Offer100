@@ -95,4 +95,15 @@
         <url-pattern>/control/DeleteInfoServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <display-name>ToOfferDetailsServlet</display-name>
+        <servlet-name>ToOfferDetailsServlet</servlet-name>
+        <servlet-class>control.ToOfferDetailsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ToOfferDetailsServlet</servlet-name>
+        <url-pattern>/control/ToOfferDetailsServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>

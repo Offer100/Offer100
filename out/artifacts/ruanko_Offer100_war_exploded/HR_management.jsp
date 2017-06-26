@@ -112,12 +112,12 @@
 			}else{%>
 
 			<table>
+				<form method="post" action="control/DeleteInfoServlet">
 			<%for (int i=0;i<list.size();i++){
 				Offer myOffer;
-				myOffer=(Offer)list.get(i);%>
-				<form method="post" action="control/DeleteInfoServlet">
-				<tr><td><input type="checkbox" name="delete-name" value="<%=myOffer.getId()%>"></td><td><%myOffer.getJobName();%></td><td><%myOffer.getTime();%></td></tr>
-			<%}
+				myOffer=(Offer)list.get(i);
+				out.println("<tr><td><input type=\"checkbox\" name=\"delete-name\" value=\""+myOffer.getId()+"\"></td><td>"+myOffer.getJobName()+"</td><td>"+myOffer.getTime()+"</td></tr>");
+			}
 			out.println("<td><input type='submit' name='delete_btn' value='删除'onclick='check_box()'></td>");
 			}
 			%>

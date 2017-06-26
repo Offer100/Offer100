@@ -173,5 +173,14 @@ public class Offer implements Serializable {
 			OfferDA.getConnection();
 			OfferDA.delete(id, mail);
 			OfferDA.terminate();
-		}	
+		}
+		//根据id查找一条招聘信息
+		public Offer findByID(int id){
+			Offer offer=new Offer();
+			OfferDA.getConnection();
+			offer=OfferDA.findByID(id);
+			OfferDA.terminate();
+			return offer;
+	}
+
 }

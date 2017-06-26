@@ -1,7 +1,29 @@
+<%@ page import="model.HR" %>
 <!DOCTYPE html>
 <html>
 <head>
 	<%@ page contentType="text/html; charset=UTF-8" %>
+	<%
+		String wrongMsg=(String)session.getAttribute("wrongMsg");
+		HR mHR=(HR)session.getAttribute("HR");
+		if(wrongMsg==null||wrongMsg.equals("")){
+		    //不显示弹窗
+		}else{
+	%>
+	<script type="text/javascript">
+		alert("<%=wrongMsg%>");
+	</script>
+	<%
+		session.setAttribute("wrongMsg","");
+		}
+		if(mHR==null){
+		    //登录过期
+	%>
+	<script type="text/javascript">
+		alert("登录超时或失效，马上返回登录界面");
+		window.location.href="../Offer100/login.jsp";
+	</script>
+	<%}%>
 <title>Home</title>
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">

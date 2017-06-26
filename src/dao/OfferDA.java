@@ -128,4 +128,33 @@ public class OfferDA {
 		}
 	}
 
+	/************************根据id查找一条招聘信***************************/
+	public static Offer findByID(int id){
+		String sql="select * from JobOffer_table where id='"+id+"'";
+		System.out.println(sql);
+		ResultSet rs;
+		try{
+			rs = statement.executeQuery(sql);
+			offer=new Offer();
+			if(rs.next()){
+				offer.setId(rs.getInt(1));
+				offer.setJobType(rs.getString(2));
+				offer.setIndustryCatalog(rs.getString(3));
+				offer.setCompanyName(rs.getString(4));
+				offer.setJobName(rs.getString(5));
+				offer.setWorkSkill(rs.getString(6));
+				offer.setMonthSalary(rs.getString(7));
+				offer.setContact(rs.getString(8));
+				offer.setTime(rs.getDate(9).toString());
+				offer.setAdress(rs.getString(10));
+				offer.setOtherInformation(rs.getString(11));
+				offer.setAllString(rs.getString(12));
+			}
+			rs.close();
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return offer;
+	}
+
 }

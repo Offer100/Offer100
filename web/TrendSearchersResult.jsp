@@ -11,7 +11,9 @@
     <script type="text/javascript">
         alert("<%=wrongMsg%>");
     </script>
-    <%}%>
+    <%
+            session.setAttribute("wrongMsg","");
+        }%>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>TrendSearchersResult-Page</title>
 </head>
@@ -35,7 +37,7 @@
              <img src="" style="margin-left:5%;width:80%;" />
            </div>
            <br /><br /><br />
-               <form method="post" action="/control/SubscriptionServlet">
+               <form method="post" action="control/SubscriptionServlet">
            <div id="subscription" style="display:inline;width:25%;float:left;height:220px;background-color:rgba(210,210,210,0.9);">
            <p style="text-align:center;font-size:22px;font-family:'宋体';"><b>订阅本次搜索结果</b></p>
            <p style="text-align:left;font-size:20px;font-family:'宋体';margin-left:5%;">我的电子邮箱地址：</p>

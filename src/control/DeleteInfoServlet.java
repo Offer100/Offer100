@@ -28,6 +28,10 @@ public class DeleteInfoServlet extends HttpServlet {
         List<Offer> Offers=null;
         Offer temp=new Offer();
         HR aHR=(HR)session.getAttribute("HR");
+
+        //首先置错误信息为空
+        session.setAttribute("wrongMsg","");
+        session.setAttribute("delete_list",null);
         if(aHR==null||aHR.getMail()==null){
             //若session失效，跳转到登录界面
             session.setAttribute("wrongMsg","登录过期，请重新登录");
@@ -46,12 +50,13 @@ public class DeleteInfoServlet extends HttpServlet {
             }
             //设置新的弹窗信息。
             session.setAttribute("wrongMsg","已成功删除信息");
-            //获取新的OfferList
-            //数据库部署前注释掉。
-           // Offers=temp.find(aHR.getMail());
+        }else {
+            //删除id列表为空。
+            session.setAttribute("wrongMsg", "请选择删除内容");
         }
-        //删除id列表为空。
-        session.setAttribute("wrongMsg","请选择删除内容");
+        //获取新的OfferList
+        //数据库部署前注释掉。
+        // Offers=temp.find(aHR.getMail());
         session.setAttribute("delete_list",Offers);
 
         //跳转到删除管理界面
