@@ -27,13 +27,11 @@ public class SubscriptionServlet extends HttpServlet {
             //mSub.add();
 
             //保存处理结果
-            System.out.println("here");
-            //session.setAttribute("wrongMsg","good");
             session.setAttribute("wrongMsg", "订阅邮箱："+mSub.getMail()+"订阅信息："+mSub.getDirection()+"已保存成功");
         }else{
             session.setAttribute("wrongMsg","订阅失败，请重试");
         }
 
-        resp.sendRedirect("../JobSearchResult.jsp");
+        resp.sendRedirect(fromURL);
     }
 }
