@@ -9,7 +9,10 @@
 <%@ page import="model.Offer" %>
 <%
 	String wrongMsg=(String)session.getAttribute("wrongMsg");
-	if(wrongMsg==null||wrongMsg.equals("")){}
+	List<Offer> list = (ArrayList<Offer>)session.getAttribute("delete_list");
+	if(wrongMsg==null||wrongMsg.equals("")){
+	    //不弹窗
+	}
 	else{
 %>
 	<script type="text/javascript">
@@ -93,37 +96,40 @@
 			</div>
 			<!--//side-bar-->
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main about-main manager">
-			<div class="services">
-			<p>请输入要删除的职位和发布的时间进行查询</p>
-			</div>
+				<div class="services">
+				<p>请输入要删除的职位和发布的时间进行查询</p>
+				</div>
 				<form id="deleteForm" method="post" action="control/ManageJobInfoServlet">
-			<input type="text" value="职位" name="position" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '职位';}" required="">
-			<input type="text" value="发布时间..输入格式yyyy-mm-dd" name="date-time" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '发布时间..输入格式yyyy-mm-dd';}" required="">
-			<input type="submit" value="查找" name="search">
+					<input type="text" value="职位" name="position" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '职位';}" required="">
+					<input type="text" value="发布时间..输入格式yyyy-mm-dd" name="date-time" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '发布时间..输入格式yyyy-mm-dd';}" required="">
+					<input type="submit" value="查找" name="search">
 				</form>
-			</div>
-			<div class="clearfix"> </div>
-			
-			<%
-				ArrayList<Offer> list = (ArrayList<Offer>) session.getAttribute("delete_list");
-				if(list==null||list.size()>0){
-				    //list不存在或为空
-				    //
-			}else{%>
-
-			<table>
-				<form method="post" action="control/DeleteInfoServlet">
-			<%for (int i=0;i<list.size();i++){
-				Offer myOffer;
-				myOffer=(Offer)list.get(i);
-				out.println("<tr><td><input type=\"checkbox\" name=\"delete-name\" value=\""+myOffer.getId()+"\"></td><td>"+myOffer.getJobName()+"</td><td>"+myOffer.getTime()+"</td></tr>");
-			}
-			out.println("<td><input type='submit' name='delete_btn' value='删除'onclick='check_box()'></td>");
-			}
-			%>
-					<input type="text" name="id_box" style="display: none" ></input>
+				<form id="deleteForm2" method="post" action="control/DeleteInfoServlet">
+                    <table style="margin-left:15%;width:80%;">
+                    <%
+                        if(list==null||list.size()<=0){
+                            //list不存在或为空
+                        }else{
+			                for (int i=0;i<list.size();i++){
+				            Offer myOffer;
+				            myOffer=(Offer)list.get(i);
+				            out.println("<tr>");
+				            out.println("<td><input type=\"checkbox\" name=\"delete-name\" value=\"" + myOffer.getId() + "\"></td>");
+				            out.println("<td>"+myOffer.getJobName()+"</td>");
+				            out.println("<td>"+myOffer.getTime()+"</td>");
+				            out.println("</tr>");
+				            //out.println("<tr><td><input type=\"checkbox\" name=\"delete-name\" value=\""+myOffer.getId()+"\"></td><td>"+myOffer.getJobName()+"</td><td>"+myOffer.getTime()+"</td></tr>");
+			            }
+			            out.println("<tr><td></td>");
+			            out.println("<td><input style=\"width:50%\" type=\"submit\"  value=\"删除 \" onclick=\"check_box()\"></td></tr>");
+                        }
+			    %>
+					<td><input type="text" name="id_box" id="id_box" style="display: none" ></td>
+                    </table>
 				</form>
-			</table>
+            </div>
+		</div>
+	</div>
 
 
 			<!-- Bootstrap core JavaScript
@@ -133,13 +139,13 @@
      <script type="text/javascript">
      function check_box(){
      	var obj=document.getElementsByName("delete-name");
-     	var form=document.getElementById("deleteForm");
+     	var form=document.getElementById("deleteForm2");
      	var check_val=new Array();
      	for(k in obj){
      		if(obj[k].checked)
      			check_val.push(obj[k].value)
      	}
-     	document.getElementsByName("id_box").value=check_val;
+     	document.getElementById("id_box").value=check_val;
 		 form.submit();
      }
      </script>

@@ -33,9 +33,9 @@ public class HRLoginServlet extends HttpServlet {
         session.setAttribute("wrongMsg","");
 
         try {
-            //if( aHR.check(aHR)){
+            if( aHR.check(aHR)){
             //TEST
-            if( true){
+            //if( true){
                 //匹配成功
                 //重定向到HR招聘信息管理界面
                 session.setAttribute("HR",aHR);

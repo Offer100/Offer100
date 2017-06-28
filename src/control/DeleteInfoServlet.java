@@ -23,11 +23,11 @@ public class DeleteInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         HttpSession session=req.getSession();
-        String ids=req.getParameter("id_box");
         List<String> deleteIds=null;
         List<Offer> Offers=null;
         Offer temp=new Offer();
         HR aHR=(HR)session.getAttribute("HR");
+        String ids=req.getParameter("id_box");
 
         //首先置错误信息为空
         session.setAttribute("wrongMsg","");
@@ -46,7 +46,7 @@ public class DeleteInfoServlet extends HttpServlet {
                 //前面已经做过验证
                 //TODO
                 //数据库部署前注释掉。
-                //temp.delete(Offerid,aHR.getMail());
+                temp.delete(Offerid,aHR.getMail());
             }
             //设置新的弹窗信息。
             session.setAttribute("wrongMsg","已成功删除信息");
@@ -56,7 +56,7 @@ public class DeleteInfoServlet extends HttpServlet {
         }
         //获取新的OfferList
         //数据库部署前注释掉。
-        // Offers=temp.find(aHR.getMail());
+        Offers=temp.find(aHR.getMail());
         session.setAttribute("delete_list",Offers);
 
         //跳转到删除管理界面

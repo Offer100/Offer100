@@ -106,4 +106,27 @@
         <url-pattern>/control/ToOfferDetailsServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <display-name>HRSearchInfoServlet</display-name>
+        <servlet-name>HRSearchInfoServlet</servlet-name>
+        <servlet-class>control.HRSearchInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HRSearchInfoServlet</servlet-name>
+        <url-pattern>/control/HRSearchInfoServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>HRToOfferDetailsServlet</display-name>
+        <servlet-name>HRToOfferDetailsServlet</servlet-name>
+        <servlet-class>control.HRToOfferDetailsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HRToOfferDetailsServlet</servlet-name>
+        <url-pattern>/control/HRToOfferDetailsServlet</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>

@@ -65,7 +65,7 @@
                       <%for(int i=0;i<list.size();i++){
                         myOffer=(Offer)list.get(i);
                         out.println(" <tr>");
-                        out.println("<td style=\"text-align:center;\"><a href=\"javascript:getOfferId("+i+")\">"+i+"</a>");
+                        out.println("<td style=\"text-align:center;\"><a href=\"javascript:getOfferId("+myOffer.getId()+")\">"+i+"</a>");
                         out.println("<td style=\"text-align:center;\">"+myOffer.getJobName()+"</td>");
                         out.println("<td style=\"text-align:center;\">"+myOffer.getCompanyName()+"</td>");
                         out.println("<td syle=\"text-align:center;\">"+myOffer.getAdress()+"</td>");

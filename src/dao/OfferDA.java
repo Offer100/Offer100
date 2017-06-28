@@ -24,7 +24,8 @@ public class OfferDA {
 	static String driver="com.mysql.jdbc.Driver";
 	static String jdbcUrl="jdbc:mysql://localhost:3306/offer100";	  
 	static String user="root";
-	static String password="wasd";
+	//static String password="wasd";
+	static String password="mayapril1996";
 	/*****************offerDA链接数据库**********************/
 	public static Connection getConnection(){
 		try{

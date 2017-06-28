@@ -22,7 +22,7 @@ public class HRSignUpServlet extends HttpServlet{
         String pwd=(String)req.getParameter("register_password");
         HR aHR=new HR(email,pwd);
         //HR用户保存
-        // aHR.add(aHR);
+        aHR.add(aHR);
 
         //没有错误信息
         session.setAttribute("wrongMsg","");

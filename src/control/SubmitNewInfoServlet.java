@@ -39,7 +39,7 @@ public class SubmitNewInfoServlet extends HttpServlet {
         //生成订单
         Offer mOffer=new Offer(company,position,workskill,wage,phone,details,timeStr,allstr,industry,jobcategory,workplace);
         try {
-            //mOffer.add(mOffer,aHR.getMail());
+            mOffer.add(mOffer,aHR.getMail());
         } catch(Exception e){
             session.setAttribute("wrongMsg","招聘信息生成失败，请稍后再试。是否返回主界面？");
         }

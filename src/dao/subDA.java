@@ -19,7 +19,8 @@ public class subDA {
  	static String driver="com.mysql.jdbc.Driver";
 	static String jdbcUrl="jdbc:mysql://localhost:3306/offer100";	  
 	static String user="root";
-	static String password="wasd";
+	//static String password="wasd";
+	static String password="mayapril1996";
     /**************************************�������ݿ�**********************************************/
    	public static Connection getConnection() {  	  
     	try{
