@@ -10,6 +10,10 @@
 	%>
 	<script type="text/javascript">
 		var type=window.confirm("<%=wrongMsg%>");
+		<%
+		//清除错误信息
+		 session.setAttribute("wrongMsg", "");
+		%>
 		if(type==true){
 		    //确认返回
 			window.location.href="../Offer100/HR_home.jsp";
@@ -62,7 +66,7 @@
 							<li ><a href="HR_home.jsp">主页</a></li>
 							<li class="active"><a href="HR_newInfo.jsp">发布</a></li>
 							<li><a href="HR_search.jsp">查询</a></li>
-							<li><a href="HR_delete.jsp">管理</a></li>
+							<li><a href="HR_management.jsp">管理</a></li>
 						</ul> 
 						<div class="social-icons">
 							<ul>
@@ -96,29 +100,29 @@
 				<label>招聘公司：<input type="text" name="company" id="company">
 				工作地点：
 					<select name="workplace">
-					<option value="wuhan">武汉</option>
-					<option value="beijing">北京</option>
-					<option value="hangzhou">杭州</option>
-					<option value="shanghai">上海</option>
-					<option value="shenzhen">深圳</option>
-					<option value="guangzhou">广州</option>
+					<option value="武汉">武汉</option>
+					<option value="北京">北京</option>
+					<option value="杭州">杭州</option>
+					<option value="上海">上海</option>
+					<option value="深圳">深圳</option>
+					<option value="广州">广州</option>
 				</select></label>
 				<label>
 				</input>职务名称：<input type="text" name="position" id="position"></input>
 				行业类别：
 				<select name="industry-category">
 					<option value="IT">IT</option>
-					<option value="finance">金融</option>
-					<option value="education">教育</option>
+					<option value="金融">金融</option>
+					<option value="教育">教育</option>
 				</select>
 				</label>
 				<label>工作技能：<input type="text"name="work-skill" id="work-skill"></input>工作薪酬：<input type="text" name="wage" id="wage"></input></label>
 				<label>联系方式：<input type="text" name="phone" id="phone"></input>
 				工作类型：
 					<select name="job_category">
-						<option value="intern">实习</option>
-						<option value="full_time">全职</option>
-						<option value="fresh">应届</option>
+						<option value="实习">实习</option>
+						<option value="全职">全职</option>
+						<option value="应届">应届</option>
 					</select></label>
 					<label><textarea type="text" name="details" id="details" class="det" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '详细信息...';}" required="">详细信息...</textarea></label>
 					<!--<input type="submit" name="submit" value="提交"></input>-->

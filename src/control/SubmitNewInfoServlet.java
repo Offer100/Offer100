@@ -20,25 +20,26 @@ public class SubmitNewInfoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         HttpSession session=req.getSession();
+
         //获取此时的系统时间
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
         Date currentTime=new Date();
         String timeStr=sdf.format(currentTime);
-        String company=(String)req.getAttribute("company");
-        String workplace=(String)req.getAttribute("workplace");
-        String position=(String)req.getAttribute("position");
-        String industry=(String)req.getAttribute("industry-category");
-        String workskill=(String)req.getAttribute("work-skill");
-        String wage=(String)req.getAttribute("wage");
-        String phone=(String)req.getAttribute("phone");
-        String jobcategory=(String)req.getAttribute("job_category");
-        String details=(String)req.getAttribute("details");
+        String company=(String)req.getParameter("company");
+        String workplace=(String)req.getParameter("workplace");
+        String position=(String)req.getParameter("position");
+        String industry=(String)req.getParameter("industry-category");
+        String workskill=(String)req.getParameter("work-skill");
+        String wage=(String)req.getParameter("wage");
+        String phone=(String)req.getParameter("phone");
+        String jobcategory=(String)req.getParameter("job_category");
+        String details=(String)req.getParameter("details");
         String allstr=workplace+"#"+position+"#"+industry+"#"+jobcategory;
         HR aHR=(HR)session.getAttribute("HR");
         //生成订单
         Offer mOffer=new Offer(company,position,workskill,wage,phone,details,timeStr,allstr,industry,jobcategory,workplace);
         try {
-            //mOffer.add(mOffer,aHR.getMail());
+            mOffer.add(mOffer,aHR.getMail());
         } catch(Exception e){
             session.setAttribute("wrongMsg","招聘信息生成失败，请稍后再试。是否返回主界面？");
         }

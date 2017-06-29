@@ -1,9 +1,6 @@
-package db;
+package dao;
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.List;
-import model.*;
+import model.Frequency;
 
 
 public class Test {

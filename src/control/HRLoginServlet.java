@@ -29,13 +29,17 @@ public class HRLoginServlet extends HttpServlet {
         List<Offer> offersToShow=new ArrayList<Offer>();
         Offer temp=new Offer();
 
+        //首先置错误消息为空
+        session.setAttribute("wrongMsg","");
+
         try {
-            //if( aHR.check(aHR)){
+            if( aHR.check(aHR)){
             //TEST
-            if( true){
+            //if( true){
                 //匹配成功
                 //重定向到HR招聘信息管理界面
                 session.setAttribute("HR",aHR);
+                session.setAttribute("wrongMsg","");
                 //获取
                 resp.sendRedirect("../HR_home.jsp");
 
@@ -44,6 +48,7 @@ public class HRLoginServlet extends HttpServlet {
                 //匹配失败
                 //重定向至登录界面
                 session.setAttribute("wrongMsg","用户密码不匹配，请核对!");
+                session.setAttribute("HR",null);
                 resp.sendRedirect("../login.jsp");
                 //TEST
             }
