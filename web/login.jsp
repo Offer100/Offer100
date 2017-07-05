@@ -98,7 +98,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													<div class="checkbox-form">
 														<div class="check-left">
 															<div class="check">
-																<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>记住密码</label>
+																<!--<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>记住密码</label>-->
 															</div>
 														</div>
 														<div class="check-right">

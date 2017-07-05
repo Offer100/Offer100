@@ -128,5 +128,62 @@
         <url-pattern>/control/HRToOfferDetailsServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <display-name>LogoutServlet</display-name>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>control.LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/control/LogoutServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>ToHRHomeServlet</display-name>
+        <servlet-name>ToHRHomeServlet</servlet-name>
+        <servlet-class>control.ToHRHomeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ToHRHomeServlet</servlet-name>
+        <url-pattern>/control/ToHRHomeServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>ToHRManageServlet</display-name>
+        <servlet-name>ToHRManageServlet</servlet-name>
+        <servlet-class>control.ToHRManageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ToHRManageServlet</servlet-name>
+        <url-pattern>/control/ToHRManageServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>ToHRNewInfoServlet</display-name>
+        <servlet-name>ToHRNewInfoServlet</servlet-name>
+        <servlet-class>control.ToHRNewInfoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ToHRNewInfoServlet</servlet-name>
+        <url-pattern>/control/ToHRNewInfoServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>ToHRSearchServlet</display-name>
+        <servlet-name>ToHRSearchServlet</servlet-name>
+        <servlet-class>control.ToHRSearchServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ToHRSearchServlet</servlet-name>
+        <url-pattern>/control/ToHRSearchServlet</url-pattern>
+    </servlet-mapping>
+
+
+
 
 </web-app>

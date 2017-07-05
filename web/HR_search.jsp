@@ -1,13 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
  <%@ page language="java" import="java.util.*"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html >
 <html>
 <head>
 
 <!--导入javabean-->
 
 <title>HR_search</title>
+<link rel="stylesheet" type="text/css" href="css/myStyle.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
@@ -44,17 +45,17 @@
 			<!--side-bar-->
 			<div class="col-sm-3 col-md-2 sidebar">
 				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" alt="logo"/></a>
+					<a href="HR_home.jsp"><img src="images/logo.png" alt="logo"/></a>
 				</div>
 				<div class="top-nav">
 					<span class="menu-icon"><img src="images/menu-icon.png" alt=""/></span>	
 					<div class="nav1">
 						<ul class=" nav nav-sidebar">
-							<li><a href="HR_newInfo.jsp">发布招聘信息</a></li>
-							<li class="active"><a href="HR_search.jsp">查询历史信息</a></li>
-							<li><a href="HR_management.jsp">管理招聘信息</a></li>
+							<li><a href="HR_newInfo.jsp">发布</a></li>
+							<li class="active"><a href="HR_search.jsp">查询</a></li>
+							<li><a href="HR_management.jsp">管理</a></li>
+							<li><a href="control/LogoutServlet">注销</a></li>
 							
-							<li><a href="contact.html">Contact</a></li>
 						</ul> 					
 					</div>	
 					<!-- script-for-menu -->
@@ -72,22 +73,21 @@
 			<!--//side-bar-->
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main about-main">
 				<!--查询历史信息-->
-				<div class="查询历史信息">			
+				<div class="search-info">			
 					<h3>查询历史信息</h3>
 
-
-
-
-
-<div class="col-md-8 contact-form">
+					<div class="col-md-8 contact-form manager">
 							<form method="post" action="control/HRSearchInfoServlet">
 								<input type="text" name="workplace" value="地点" onfocus="this.value = '地点';" onblur="if (this.value == '') {this.value = '地点';}" required="">
 								<input type="text" name="time" value="时间" onfocus="this.value = '时间';" onblur="if (this.value == '') {this.value = '时间';}" required="">
 								<input type="submit" value="Submit" name="search" >
 							</form>
-						</div>
-						<div class="clearfix"> </div>
-
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 
 
 								
@@ -95,6 +95,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.js"> </script>
+
    
 </body>
 </html>

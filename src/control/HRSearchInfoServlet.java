@@ -20,8 +20,8 @@ public class HRSearchInfoServlet extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         HttpSession session=req.getSession();
-        String workplace = (String)session.getAttribute("workplace");
-        String time = (String) session.getAttribute("time");
+        String workplace = (String)req.getParameter("workplace");
+        String time = (String)req.getParameter("time");
         Offer mOffer=new Offer();
         List<Offer> Offers=null;
         HR aHR=(HR)session.getAttribute("HR");
@@ -29,7 +29,7 @@ public class HRSearchInfoServlet extends HttpServlet{
         //首先置错误信息为空
         session.setAttribute("wrongMsg","");
 
-        if(aHR==null||aHR.getMail()==null){
+        if(aHR==null){
             //无法获取HR信息
             //转入登录界面
             session.setAttribute("wrongMsg","登录过期，请重新登录");

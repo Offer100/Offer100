@@ -4,6 +4,8 @@
     <%@ page contentType="text/html; charset=UTF-8" %>
     <%
         String wrongMsg=(String)session.getAttribute("wrongMsg");
+        String fileURL=(String)session.getAttribute("fileURL");
+        String filename=(String)session.getAttribute("filename");
         if(wrongMsg==null||wrongMsg.equals("")){
             //不显示弹窗
         }else{
@@ -34,7 +36,7 @@
            <div id="result-box">
           <div id="TrendSearchersResult" style="display:inline;width:60%;float:left;">
             <p style="margin-left:20%;font-size:25px;font-family:'宋体';"><b>搜索指数整体趋势</b></p>
-             <img src="" style="margin-left:5%;width:80%;" />
+             <img src="<%=fileURL%>" style="margin-left:5%;width:80%;" />
            </div>
            <br /><br /><br />
                <form method="post" action="control/SubscriptionServlet">
