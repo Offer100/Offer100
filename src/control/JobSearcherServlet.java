@@ -1,5 +1,7 @@
 package control;
 
+import model.Frequency;
+import model.JobSearcher;
 import model.Offer;
 
 import javax.servlet.ServletException;
@@ -22,9 +24,26 @@ public class JobSearcherServlet extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         HttpSession session=req.getSession();
         String keyword=req.getParameter("keyword");
-        Offer mOffer=null;
-        List<Offer> Offers=null;
-
+        Offer mOffer=new Offer();
+        List<Offer> Offers=new ArrayList<Offer>();
+        int[] result=null;
+        Frequency frequency=new Frequency();
+        JobSearcher jobSearcher=new JobSearcher();
+        //更新Keyword的点击数据
+        if(keyword!=null&&!keyword.equals("")){
+            //搜索关键词不为空
+            System.out.println(keyword);
+            frequency.update(keyword,null);
+            //查询函数，获取Offerid
+            result=jobSearcher.search(keyword);
+            for(int i=0;i<result.length;i++){
+                if(result[i]==0)
+                    break;
+                mOffer = mOffer.findByID(result[i]);
+                if (mOffer != null && mOffer.getAllString() != null)
+                    Offers.add(mOffer);
+            }
+        }
         //TODO
         //查询函数
 
@@ -34,10 +53,7 @@ public class JobSearcherServlet extends HttpServlet {
 
         //TODO
         //假数据
-        mOffer=new Offer("sss","ssss","ssss","ssss","ssss",
-                "sssss","sss","ssss","ssss","ssss","ssss");
-        Offers = new ArrayList<Offer>();
-        Offers.add(mOffer);
+
         //首先将错误消息置空
         session.setAttribute("wrongMsg","");
         if(Offers==null||Offers.size()<=0){

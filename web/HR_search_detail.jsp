@@ -135,7 +135,7 @@
 			<!--side-bar-->
 			<div class="col-sm-3 col-md-2 sidebar">
 				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" alt="logo"/></a>
+					<a href="HR_home.jsp"><img src="images/logo.png" alt="logo"/></a>
 				</div>
 				<div class="top-nav">
 					<span class="menu-icon"><img src="images/menu-icon.png" alt=""/></span>	
@@ -145,8 +145,8 @@
 							<li><a href="HR_newInfo.jsp">发布</a></li>
 							<li class="active"><a href="HR_search.jsp">查询</a></li>
 							<li><a href="HR_management.jsp">管理</a></li>
-							
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="control/LogoutServlet">注销</a></li>
+
 						</ul> 
 						<div class="social-icons">
 							<ul>

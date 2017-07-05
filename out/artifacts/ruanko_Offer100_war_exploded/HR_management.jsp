@@ -71,6 +71,7 @@
 							<li class="active"><a href="HR_newInfo.jsp">发布</a></li>
 							<li><a href="HR_search.jsp">查询</a></li>
 							<li><a href="HR_management.jsp">管理</a></li>
+								<li><a href="control/LogoutServlet">注销</a></li>
 						</ul> 
 						<div class="social-icons">
 							<ul>
@@ -149,5 +150,8 @@
 		 form.submit();
      }
      </script>
+
+
+	</script>
 </body>
 </html>

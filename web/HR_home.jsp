@@ -5,23 +5,12 @@
 	<%@ page contentType="text/html; charset=UTF-8" %>
 	<%
 		String wrongMsg=(String)session.getAttribute("wrongMsg");
-		HR mHR=(HR)session.getAttribute("HR");
 		if(wrongMsg==null||wrongMsg.equals("")){
 		    //不显示弹窗
 		}else{
 	%>
 	<script type="text/javascript">
 		alert("<%=wrongMsg%>");
-	</script>
-	<%
-		session.setAttribute("wrongMsg","");
-		}
-		if(mHR==null){
-		    //登录过期
-	%>
-	<script type="text/javascript">
-		alert("登录超时或失效，马上返回登录界面");
-		window.location.href="../Offer100/login.jsp";
 	</script>
 	<%}%>
 <title>Home</title>
@@ -60,7 +49,7 @@
 			<!--side-bar-->
 			<div class="col-sm-3 col-md-2 sidebar">
 				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" alt="logo"/></a>
+					<a href="JobSearch.jsp"><img src="images/logo.png" alt="logo"/></a>
 				</div>
 				<div class="top-nav">
 					<span class="menu-icon"><img src="images/menu-icon.png" alt=""/></span>	
@@ -70,6 +59,7 @@
 							<li ><a href="HR_newInfo.jsp">发布</a></li>
 							<li><a href="HR_search.jsp">查询</a></li>
 							<li><a href="HR_management.jsp">管理</a></li>
+							<li><a href="control/LogoutServlet">注销</a></li>
 						</ul> 
 						<div class="social-icons">
 							<ul>
@@ -111,5 +101,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.js"> </script>
+
 </body>
 </html>

@@ -8,12 +8,19 @@ import java.util.*;
 //import java.util.regex.Pattern;
 //import javassist.bytecode.Descriptor.Iterator;
 public class FrequencyDA {
-	static private Jedis jedis;
+	static private Jedis jedis=null;
 	public FrequencyDA() {
 		// TODO Auto-generated constructor stub
 	}
      public static void getConnection(){
-    	 jedis=new Jedis("localhost");
+		///try {
+			//仅当jedis未初始化时链接
+			//if(jedis==null)
+				jedis = new Jedis("127.0.0.1", 6379);
+
+		//}catch(Exception e){
+			//already connect
+		//}
     	 System.out.println("Redis链接成功！");
     	 System.out.println("Server is running: "+jedis.ping());
      }
@@ -99,6 +106,7 @@ public class FrequencyDA {
     		 System.out.println("超出数据库的天数范围,只能显示"+dateList.size()+"天的数据");
     		 day=dateList.size();
     	 }
+    	 //有序Map
     	 Map<String,Integer> searchAll=new LinkedHashMap<String,Integer>();
     	 for(int i=0;i<day;i++){
     		 searchAll.put(dateList.get(i),results_times[i]);

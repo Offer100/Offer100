@@ -29,7 +29,7 @@ public class ToOfferDetailsServlet extends HttpServlet{
         //TODO
         //假数据
         session.setAttribute("wrongMsg","");
-        if(mOffer==null){
+        if(mOffer==null||mOffer.getAdress()==""){
             session.setAttribute("wrongMsg","获取详情信息失败，回到查询界面。");
             //置空搜索结果列表
             session.setAttribute("search_list",null);
